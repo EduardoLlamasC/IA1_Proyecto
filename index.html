@@ -10,11 +10,18 @@
     <link href="./css/style.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Chatbot</h1>
-    <div id="chat"></div>
-    <input type="text" id="user_input" placeholder="Type a message" disabled />
-    <button onclick="sendMessage()" disabled>Send</button>
-    <div id="loading" style="display: block;">Loading model...</div>
+    <div class="container">
+        <div class="row">
+            <h1>Chatbot - IA1</h1>
+            <h3>Grupo 2</h3>
+
+            <div id="chat"></div>
+            <input type="text" id="user_input" placeholder="Escriba algo para empezar" disabled />
+            <button id="send" onclick="sendMessage()" disabled>Enviar</button>
+            <div id="loading" style="display: block;">Cargando modelo...</div>
+        </div>
+    </div>
+    
 
     <script>
         let intentsData = null;
@@ -123,8 +130,8 @@
             }
 
             const response = await predictResponse(userInput);
-            document.getElementById('chat').innerHTML += `<div><strong>Tu:</strong> ${userInput}</div>`;
-            document.getElementById('chat').innerHTML += `<div><strong>Bot:</strong> ${response}</div>`;
+            document.getElementById('chat').innerHTML += `<div class"user""><strong>Tu:</strong> ${userInput}</div>`;
+            document.getElementById('chat').innerHTML += `<div class="bot"><strong>Bot:</strong> ${response}</div>`;
         }
 
         window.onload = loadData;

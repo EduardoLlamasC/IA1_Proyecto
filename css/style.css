@@ -1,3 +1,30 @@
 body{
-    background-color: #D9EAFD;
+    background-color: #F8FAFC;
+}
+#user_input{
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    height: 35px;
+}
+#chat{
+    height: 300px;
+    border: 1px solid #D9EAFD;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: auto;
+}
+#chat .user{
+    text-align: right;
+}
+#chat .bot{
+    text-align: left;
+}
+#send{
+    background-color: #134B70;
+    color: #ffffff;
+    height: 35px;
+    border: 1px solid #78B3CE;
+    border-radius: 10px;
 }
