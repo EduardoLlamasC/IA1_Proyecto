@@ -1,91 +1,16 @@
-{
-    "intents": [
-      {
-        "tag": "greeting",
-        "patterns": [
-          "Hola", 
-          "Hola, ¿Cómo estás?", 
-          "¿Qué tal?", 
-          "Buenos días", 
-          "Buenas tardes", 
-          "Buenas noches", 
-          "Hola, ¿Qué cuentas?", 
-          "¡Hey!", 
-          "¡Hola, amigo!", 
-          "Hola, ¿cómo va todo?", 
-          "¡Buenas!", 
-          "¿Cómo te va?", 
-          "¿Qué hay de nuevo?", 
-          "Hola, un gusto verte", 
-          "¡Saludos!", 
-          "¿Cómo andas?", 
-          "Hola, ¿todo bien?"
-        ],
-        "responses": [
-          "Hola", 
-          "Hola, ¿Cómo te puedo ayudar?", 
-          "¿Qué tal?", 
-          "Buenos días", 
-          "Buenas tardes", 
-          "Buenas noches", 
-          "Hola, ¿En qué puedo ayudarte?",
-          "¡Hey!", 
-          "¡Hola, qué gusto verte!", 
-          "¡Buenas!", 
-          "¿Cómo estás hoy?", 
-          "Hola, ¿cómo va todo?", 
-          "¡Saludos!", 
-          "Hola, ¿todo bien?", 
-          "¿Qué hay de nuevo?"
-        ],
-        "context_set": ""
-      },
-      {
-        "tag": "goodbye",
-        "patterns": [
-          "Adiós", 
-          "Nos vemos", 
-          "Feliz día", 
-          "Hasta luego", 
-          "Hasta pronto", 
-          "Chao", 
-          "Que te vaya bien", 
-          "Cuídate"
-        ],
-        "responses": [
-          "Te veo después", 
-          "Adiós", 
-          "Cuídate", 
-          "Hasta luego", 
-          "Nos vemos", 
-          "Feliz día", 
-          "Hasta pronto", 
-          "Hasta la próxima", 
-          "Cuídate mucho",
-          "Que tengas un buen día"
-        ]
-      },
-      {
-        "tag": "thanks",
-        "patterns": [
-          "Gracias", 
-          "Te agradezco", 
-          "Muchas gracias", 
-          "Mil gracias", 
-          "¡Gracias infinitas!", 
-          "Estoy muy agradecido"
-        ],
-        "responses": [
-          "Es un gusto", 
-          "De nada", 
-          "No tienes por qué agradecer", 
-          "Estoy para ayudarte", 
-          "No hay problema", 
-          "No hay de qué", 
-          "Con gusto", 
-          "Siempre a la orden"
-        ]
-      }
-    ]
-  }
-  
+{"intents": [
+    {"tag": "greeting",
+     "patterns": ["Hola", "Hola, ¿Cómo estás?", "Quetal", "Buenos días", "Buenas tardes", "Buenas noches"],
+     "responses": ["Hola", "Hola, ¿Cómo te puedo ayudar?", "Quetal", "Buenos días", "Buenas tardes", "Buenas noches", "Hola, ¿En qué puedo ayudarte?"],
+     "context_set": ""
+    },
+    {"tag": "goodbye",
+     "patterns": ["Adios", "Nos vemos", "Feliz día", "Hasta luego"],
+     "responses": ["Te veo después", "Adios", "Cuídate", "Hasta luego", "Nos vemos", "Feliz día", "Hasta pronto", "Hasta la próxima", "Cuídate mucho"]
+    },
+    {"tag": "thanks",
+     "patterns": ["Gracias", "Te agradezo", "Muchas gracias"],
+     "responses": ["Es un gusto", "De nada ", "No tienes por qué agradecer", "Estoy para ayudarte", "No hay problema", "No hay de qué"]
+    }
+]
+}
