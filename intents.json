@@ -6,7 +6,7 @@
     },
     {"tag": "goodbye",
      "patterns": ["Adios", "Nos vemos", "Feliz día", "Hasta luego"],
-     "responses": ["Te veo después", "Adios", "Cuídate", "Hasta luego", "Nos vemos", "Feliz día", "Hasta pronto", "Hasta la próxima", "Cuídate mucho"],
+     "responses": ["Te veo después", "Adios", "Cuídate", "Hasta luego", "Nos vemos", "Feliz día", "Hasta pronto", "Hasta la próxima", "Cuídate mucho"]
     },
     {"tag": "thanks",
      "patterns": ["Gracias", "Te agradezo", "Muchas gracias"],
