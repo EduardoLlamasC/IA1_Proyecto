@@ -59,6 +59,7 @@ function stem(word) {
 async function loadModel() {
     // Cargar el modelo de los archivos JSON y BIN que están en el directorio principal
     model = await tf.loadLayersModel('IA1_Proyecto/chatbot_model.json');  // Modelo JSON
+    await model.loadWeights('IA1_Proyecto/chatbot_model.weights.bin');
     console.log('Modelo cargado exitosamente');
 }
 
