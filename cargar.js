@@ -6,7 +6,7 @@ let context = {}; // Contexto de la conversación
 
 // Cargar los datos de los intents (este archivo no cambia)
 async function loadData() {
-    const response = await fetch('IA1_Proyecto/intents.json');
+    const response = await fetch('intents.json');
     intentsData = await response.json();
 
     // Se deben cargar los datos para las predicciones (palabras y etiquetas)
