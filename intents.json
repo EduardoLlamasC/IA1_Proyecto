@@ -1,16 +1,314 @@
-{"intents": [
-    {"tag": "greeting",
-     "patterns": ["Hola", "Hola, ¿Cómo estás?", "Quetal", "Buenos días", "Buenas tardes", "Buenas noches"],
-     "responses": ["Hola", "Hola, ¿Cómo te puedo ayudar?", "Quetal", "Buenos días", "Buenas tardes", "Buenas noches", "Hola, ¿En qué puedo ayudarte?"],
-     "context_set": ""
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi", "Hello", "Hey", "Good day", "How are you", 
+        "What's up?", "How’s it going?", "Hey there", "Yo", "Hi there!",
+        "Good morning", "Good evening", "Is anyone here?", "Howdy", "Greetings"
+      ],
+      "responses": [
+        "Hello! Ready for a movie suggestion?",
+        "Hi there! Want a movie recommendation?",
+        "Hey! How can I help you find a great movie?",
+        "Hello! Looking for something to watch?",
+        "Hey there! Need a movie suggestion?",
+        "Hi, how's it going? Need help with finding a movie?",
+        "Hey! What type of movie are you in the mood for?",
+        "Hello! Ready to discover your next favorite movie?",
+        "Hi! Let me know if you need a movie recommendation!",
+        "Good day! Want a suggestion for your movie night?"
+      ]
     },
-    {"tag": "goodbye",
-     "patterns": ["Adios", "Nos vemos", "Feliz día", "Hasta luego"],
-     "responses": ["Te veo después", "Adios", "Cuídate", "Hasta luego", "Nos vemos", "Feliz día", "Hasta pronto", "Hasta la próxima", "Cuídate mucho"]
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye", "See you later", "Goodbye", "Take care", 
+        "Catch you later", "See ya", "Good night", "Until next time", 
+        "Later", "Farewell", "Take it easy", "I'm leaving now", "I'm out"
+      ],
+      "responses": [
+        "See you later, enjoy the movie!",
+        "Goodbye! Have a great time watching!",
+        "Bye! Come back when you're ready for another recommendation!",
+        "Take care! Hope you find the perfect movie!",
+        "See you soon! Enjoy your movie time!",
+        "Goodbye! Happy watching!",
+        "Catch you later! Hope you enjoy the movie!",
+        "Take care, and enjoy the show!",
+        "Goodbye, have fun watching your film!",
+        "Until next time, enjoy your movie!"
+      ]
     },
-    {"tag": "thanks",
-     "patterns": ["Gracias", "Te agradezo", "Muchas gracias"],
-     "responses": ["Es un gusto", "De nada ", "No tienes por qué agradecer", "Estoy para ayudarte", "No hay problema", "No hay de qué"]
+    {
+      "tag": "action_movies",
+      "patterns": [
+        "I want to watch an action movie", "Suggest me an action movie", 
+        "Show me some action movies", "Give me an action movie recommendation", 
+        "I feel like watching action", "What’s a good action movie?", 
+        "I'm in the mood for action", "Need a good action film", 
+        "Show me thrilling action movies", "What action movies should I watch?",
+        "Any great action films to recommend?", "Suggest an action-packed movie"
+      ],
+      "responses": [
+        "How about *Mad Max: Fury Road*? It's packed with intense action!",
+        "If you like action, you might enjoy *John Wick*. Fast-paced and thrilling!",
+        "I recommend *Die Hard*—a classic action movie with a great story!",
+        "Try *The Dark Knight* if you're into superhero action!",
+        "Check out *Mission: Impossible – Fallout*. High-stakes and thrilling!",
+        "If you're in the mood for some hardcore action, *Terminator 2: Judgment Day* is perfect.",
+        "How about *The Bourne Identity*? It’s action-packed and filled with suspense!",
+        "Give *The Raid: Redemption* a try—non-stop martial arts action!",
+        "For a fast-paced thrill ride, watch *Speed* with Keanu Reeves!",
+        "If you enjoy high-octane action, *Gladiator* is a must-see!"
+      ]
+    },
+    {
+      "tag": "comedy_movies",
+      "patterns": [
+        "I want to watch a comedy", "Show me some comedy movies", 
+        "Recommend a comedy movie", "Give me a comedy suggestion", 
+        "I’m in the mood for something funny", "What’s a good comedy film?", 
+        "Show me funny movies", "I need a laugh, suggest a comedy", 
+        "Any good comedies out there?", "Tell me some hilarious movies",
+        "What comedy movies are good?", "Recommend me a funny movie"
+      ],
+      "responses": [
+        "If you're in the mood for a comedy, *The Hangover* is a must-see!",
+        "How about *Superbad*? It's hilarious and full of laughs!",
+        "Try *The Grand Budapest Hotel*. It's quirky and fun!",
+        "If you want a funny animated movie, *Shrek* is always a good choice!",
+        "Check out *21 Jump Street*. It's a comedy with a lot of action!",
+        "You could try *The Big Lebowski*. It's a cult classic with some great laughs!",
+        "How about *Anchorman: The Legend of Ron Burgundy*? It’s packed with absurd humor!",
+        "If you like dark comedies, *The Death of Stalin* is both funny and political!",
+        "For a hilarious animated film, try *Zootopia*!",
+        "If you enjoy absurd humor, *Dumb and Dumber* is a classic comedy!"
+      ]
+    },
+    {
+      "tag": "drama_movies",
+      "patterns": [
+        "I want a drama movie", "Suggest me a drama", 
+        "Show me some drama movies", "Give me a good drama", 
+        "I feel like watching drama", "What’s a good dramatic movie?", 
+        "I need something emotional", "Tell me some dramatic films", 
+        "Recommend me a powerful drama", "What are some good drama films?",
+        "Show me deep drama movies", "I'm looking for a good drama"
+      ],
+      "responses": [
+        "I recommend *The Shawshank Redemption*. A deeply moving story.",
+        "How about *Forrest Gump*? It's both dramatic and inspiring!",
+        "If you haven't seen *A Beautiful Mind*, it's a must-watch for drama lovers!",
+        "Try *The Godfather*. It's a masterpiece of cinema with incredible drama!",
+        "Check out *The Pursuit of Happyness*—an uplifting and emotional story.",
+        "If you enjoy slow-burn dramas, *The Revenant* is an intense experience.",
+        "For a moving and heartfelt drama, *The Fault in Our Stars* is beautiful.",
+        "How about *The Green Mile*? It's a touching story with an unforgettable performance.",
+        "Try *12 Years a Slave*. It’s a powerful and emotional drama.",
+        "If you enjoy a good biographical drama, *The Theory of Everything* is inspiring."
+      ]
+    },
+    {
+      "tag": "movie_platform",
+      "patterns": [
+        "What movies are on Netflix?", "Any good movies on Disney+?", 
+        "Show me movies on Amazon Prime", "What can I watch on Netflix?", 
+        "Tell me some Netflix movies", "Any movies on Disney+?", 
+        "What are the best movies on Prime?", "What to watch on Netflix?", 
+        "Give me a list of Disney+ movies", "What can I stream on Amazon Prime?",
+        "Recommend some movies from Netflix", "What’s good on Disney+?"
+      ],
+      "responses": [
+        "On Netflix, you can check out *Stranger Things* or *The Irishman*.",
+        "On Disney+, I recommend *The Lion King* or *Guardians of the Galaxy*.",
+        "If you're on Amazon Prime, try *The Tomorrow War* or *One Night in Miami*.",
+        "On Netflix, *Bird Box* is a great thriller if you like suspense.",
+        "Disney+ has *Star Wars: The Mandalorian* if you’re a fan of the franchise!",
+        "On Amazon Prime, you might enjoy *The Marvelous Mrs. Maisel* if you like comedy-dramas.",
+        "For some epic films, try *The Avengers* series on Disney+.",
+        "On Netflix, *Enola Holmes* is a fun mystery adventure!",
+        "If you're into documentaries, Netflix has *My Octopus Teacher*.",
+        "On Amazon Prime, check out *The Boys* for a dark take on superheroes!"
+      ]
+    },
+    {
+      "tag": "movie_preferences",
+      "patterns": [
+        "I want something recent", "Show me new releases", 
+        "What's a good recent movie to watch?", "Tell me something new", 
+        "Any good movies this year?", "What’s new in theaters?", 
+        "Give me a recent film recommendation", "Suggest a new movie", 
+        "What’s a great new movie?", "What movies came out recently?",
+        "Any fresh movie releases?", "Give me a modern movie suggestion"
+      ],
+      "responses": [
+        "How about *Dune* (2021)? It's a great new sci-fi film!",
+        "You should check out *No Time to Die* if you like action!",
+        "If you like horror, *A Quiet Place Part II* is an awesome recent film!",
+        "For a fresh take on a classic, try *Cruella* (2021).",
+        "You might enjoy *The Suicide Squad* if you're in the mood for something fun and action-packed.",
+        "If you're into historical dramas, *The Trial of the Chicago 7* is a great recent film.",
+        "How about *Spider-Man: No Way Home*? It’s packed with action and nostalgia.",
+        "You could check out *Eternals* for a new Marvel movie!",
+        "If you're a fan of animated films, *Luca* (2021) on Disney+ is a heartwarming choice.",
+        "For a mind-bending experience, *Tenet* (2020) by Christopher Nolan is a must-watch."
+      ]
+    },
+    {
+      "tag": "saludo",
+      "patterns": [
+        "Hola", "Buenas", "Qué tal", "Buen día", "¿Cómo estás?", 
+        "¿Qué pasa?", "¿Cómo va todo?", "Hola ahí", "Yo", "¡Hola!",
+        "Buenos días", "Buenas noches", "¿Hay alguien?", "¿Qué tal?", "Saludos"
+      ],
+      "responses": [
+        "¡Hola! ¿Listo para una recomendación de película?",
+        "¡Hola! ¿Quieres una recomendación de película?",
+        "¡Hola! ¿Cómo te puedo ayudar a encontrar una buena película?",
+        "¡Hola! ¿Buscas algo para ver?",
+        "¡Hola ahí! ¿Necesitas una sugerencia de película?",
+        "¡Hola! ¿Cómo va todo? ¿Te ayudo a encontrar una película?",
+        "¡Hola! ¿Qué tipo de película te apetece ver?",
+        "¡Hola! ¿Listo para descubrir tu próxima película favorita?",
+        "¡Hola! Avísame si necesitas una recomendación de película.",
+        "¡Buen día! ¿Quieres una sugerencia para tu noche de cine?"
+      ]
+    },
+    {
+      "tag": "despedida",
+      "patterns": [
+        "Adiós", "Nos vemos", "Hasta luego", "Cuídate", 
+        "Hasta pronto", "Chao", "Buenas noches", "Hasta la próxima", 
+        "Luego", "Adiós", "Cuídate", "Me voy ahora", "Me salgo"
+      ],
+      "responses": [
+        "¡Hasta luego, disfruta de la película!",
+        "¡Adiós! ¡Que pases un gran momento viendo la película!",
+        "¡Chao! Vuelve cuando necesites otra recomendación.",
+        "¡Cuídate! Espero que encuentres la película perfecta.",
+        "¡Nos vemos pronto! ¡Disfruta de tu momento de cine!",
+        "¡Adiós! ¡Felices películas!",
+        "¡Hasta luego! ¡Espero que disfrutes la película!",
+        "Cuídate y disfruta de la película.",
+        "¡Adiós! ¡Diviértete viendo tu película!",
+        "Hasta la próxima, ¡disfruta de la película!"
+      ]
+    },
+    {
+      "tag": "peliculas_de_accion",
+      "patterns": [
+        "Quiero ver una película de acción", "Recomiéndame una película de acción", 
+        "Muéstrame algunas películas de acción", "Dame una recomendación de acción", 
+        "Tengo ganas de ver acción", "¿Qué película de acción me recomiendas?", 
+        "Estoy de humor para acción", "Necesito una buena película de acción", 
+        "Muéstrame películas de acción emocionantes", "¿Qué películas de acción debería ver?",
+        "¿Alguna buena película de acción?", "Recomiéndame una película llena de acción"
+      ],
+      "responses": [
+        "¿Qué tal *Mad Max: Furia en el camino*? ¡Está llena de acción intensa!",
+        "Si te gusta la acción, podrías disfrutar de *John Wick*. ¡Rápida y emocionante!",
+        "Te recomiendo *Duro de matar*, ¡un clásico de acción con una gran historia!",
+        "Prueba *El caballero oscuro* si te gustan las películas de acción de superhéroes.",
+        "Mira *Misión: Imposible – Fallout*. ¡Con tensión y acción sin parar!",
+        "Si estás buscando acción sin descanso, *Terminator 2: El juicio final* es perfecta.",
+        "¿Qué tal *La identidad Bourne*? ¡Acción y suspense a tope!",
+        "Prueba *The Raid: Redemption*, ¡una película de artes marciales sin descanso!",
+        "Si quieres un viaje de acción rápido, mira *Speed* con Keanu Reeves.",
+        "Si te gustan las películas de acción épicas, *Gladiador* es imprescindible."
+      ]
+    },
+    {
+      "tag": "peliculas_de_comedia",
+      "patterns": [
+        "Quiero ver una comedia", "Muéstrame algunas comedias", 
+        "Recomiéndame una comedia", "Dame una sugerencia de comedia", 
+        "Tengo ganas de algo divertido", "¿Cuál es una buena película de comedia?", 
+        "Muéstrame películas graciosas", "Necesito reír, sugiéreme una comedia", 
+        "¿Hay buenas comedias?", "Dime algunas películas divertidas",
+        "¿Qué comedias son buenas?", "Recomiéndame una película graciosa"
+      ],
+      "responses": [
+        "Si buscas comedia, *¿Qué pasó ayer?* es imperdible.",
+        "¿Qué tal *Superbad*? ¡Es hilarante y llena de risas!",
+        "Prueba *El Gran Hotel Budapest*. ¡Es peculiar y divertida!",
+        "Si quieres una comedia animada, *Shrek* siempre es una buena opción.",
+        "Mira *21 Jump Street*. ¡Es una comedia con mucha acción!",
+        "Podrías probar *El Gran Lebowski*. ¡Es un clásico con risas aseguradas!",
+        "¿Qué tal *El Reportero: La leyenda de Ron Burgundy*? ¡Está llena de humor absurdo!",
+        "Si te gustan las comedias oscuras, *La muerte de Stalin* es graciosa y política.",
+        "Para una película animada y divertida, prueba *Zootopia*.",
+        "Si te gusta el humor absurdo, *Dumb and Dumber* es una comedia clásica."
+      ]
+    },
+    {
+      "tag": "peliculas_de_drama",
+      "patterns": [
+        "Quiero ver una película dramática", "Recomiéndame un drama", 
+        "Muéstrame algunas películas de drama", "Dame una buena película dramática", 
+        "Tengo ganas de ver drama", "¿Cuál es una buena película dramática?", 
+        "Necesito algo emocional", "Dime algunas películas dramáticas", 
+        "Recomiéndame un drama impactante", "¿Qué películas dramáticas son buenas?",
+        "Muéstrame películas profundas", "Busco un buen drama"
+      ],
+      "responses": [
+        "Te recomiendo *Cadena perpetua*. Es una historia profundamente conmovedora.",
+        "¿Qué tal *Forrest Gump*? ¡Es dramática e inspiradora!",
+        "Si no has visto *Una mente brillante*, ¡es una película obligada para los amantes del drama!",
+        "Prueba *El Padrino*. ¡Es una obra maestra del cine con un gran drama!",
+        "Mira *En busca de la felicidad*. ¡Es una historia emocional y muy inspiradora!",
+        "Si te gustan los dramas intensos, *El renacido* es una experiencia increíble.",
+        "Para un drama conmovedor, *Bajo la misma estrella* es precioso.",
+        "¿Qué tal *La milla verde*? Es una historia emotiva con una actuación inolvidable.",
+        "Prueba *12 años de esclavitud*. ¡Es un drama poderoso y emocional!",
+        "Si te gustan los biográficos, *La teoría del todo* es inspiradora."
+      ]
+    },
+    {
+      "tag": "plataformas_de_peliculas",
+      "patterns": [
+        "¿Qué películas hay en Netflix?", "¿Alguna buena película en Disney+?", 
+        "Muéstrame películas en Amazon Prime", "¿Qué puedo ver en Netflix?", 
+        "Dime algunas películas de Netflix", "¿Hay películas en Disney+?", 
+        "¿Cuáles son las mejores películas en Prime?", "¿Qué ver en Netflix?", 
+        "Dame una lista de películas en Disney+", "¿Qué puedo ver en Amazon Prime?",
+        "Recomiéndame algunas películas de Netflix", "¿Qué hay en Disney+?"
+      ],
+      "responses": [
+        "En Netflix, puedes ver *Stranger Things* o *El irlandés*.",
+        "En Disney+, te recomiendo *El Rey León* o *Guardianes de la Galaxia*.",
+        "Si estás en Amazon Prime, prueba *La guerra del mañana* o *Una noche en Miami*.",
+        "En Netflix, *Bird Box* es un gran thriller si te gustan las historias de suspense.",
+        "Disney+ tiene *Star Wars: The Mandalorian* si eres fanático de la saga.",
+        "En Amazon Prime, podrías disfrutar de *La maravillosa Mrs. Maisel* si te gustan las comedias dramáticas.",
+        "Para películas épicas, prueba la serie *Los Vengadores* en Disney+.",
+        "En Netflix, *Enola Holmes* es una divertida aventura de misterio.",
+        "Si te gustan los documentales, Netflix tiene *Mi maestro el pulpo*.",
+        "En Amazon Prime, mira *The Boys*, ¡es una visión oscura sobre los superhéroes!"
+      ]
+    },
+    {
+      "tag": "peliculas_recientes",
+      "patterns": [
+        "Quiero algo reciente", "Muéstrame los estrenos", 
+        "¿Cuál es una buena película reciente?", "Dime algo nuevo", 
+        "¿Qué películas buenas han salido este año?", "¿Qué hay de nuevo en los cines?", 
+        "Dame una recomendación de película reciente", "Sugiere una película nueva", 
+        "¿Cuál es una gran película reciente?", "¿Qué películas han salido recientemente?",
+        "¿Algún estreno interesante?", "Dame una sugerencia de película moderna"
+      ],
+      "responses": [
+        "¿Qué tal *Dune* (2021)? ¡Es una gran película de ciencia ficción!",
+        "Deberías ver *Sin tiempo para morir* si te gusta la acción.",
+        "Si te gusta el horror, *Un lugar en silencio Parte II* es genial.",
+        "Para un nuevo giro en un clásico, prueba *Cruella* (2021).",
+        "Podrías disfrutar de *El escuadrón suicida* si buscas algo divertido y lleno de acción.",
+        "Si te gustan los dramas históricos, *El juicio de los 7 de Chicago* es una gran película reciente.",
+        "¿Qué tal *Spider-Man: Sin camino a casa*? ¡Está llena de acción y nostalgia!",
+        "Puedes ver *Eternals* para una nueva película del universo Marvel.",
+        "Si eres fan de las películas animadas, *Luca* (2021) en Disney+ es una opción conmovedora.",
+        "Para una experiencia mentalmente retorcida, *Tenet* (2020) de Christopher Nolan es imprescindible."
+      ]
     }
-]
+  ]
 }
