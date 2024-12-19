@@ -6,7 +6,7 @@ let context = {}; // Contexto de la conversación
 
 // Cargar los datos de los intents (este archivo no cambia)
 async function loadData() {
-    const response = await fetch('intents.json');
+    const response = await fetch('IA1_Proyecto/intents.json');
     intentsData = await response.json();
 
     // Se deben cargar los datos para las predicciones (palabras y etiquetas)
@@ -58,7 +58,7 @@ function stem(word) {
 // Cargar el modelo previamente guardado
 async function loadModel() {
     // Cargar el modelo de los archivos JSON y BIN que están en el directorio principal
-    model = await tf.loadLayersModel('chatbot_model.json');  // Modelo JSON
+    model = await tf.loadLayersModel('IA1_Proyecto/chatbot_model.json');  // Modelo JSON
     console.log('Modelo cargado exitosamente');
 }
 
