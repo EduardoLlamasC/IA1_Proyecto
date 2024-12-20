@@ -1,0 +1,729 @@
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": [
+                "Hi",
+                "How are you",
+                "Is anyone there?",
+                "Hello",
+                "hello there",
+                "hello guys",
+                "what is going on",
+                "good to see you",
+                "whatss up",
+                "whats up",
+                "Good day",
+                "what are you guys doing here"
+            ],
+            "responses": [
+                "Hello, thanks for visiting",
+                "Good to see you again. we are a park of atractions",
+                "Hi there, how can I help?,do you want to purchase tickets"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "questions",
+            "patterns": [
+                "can i come with my family",
+                "can i come with my kids",
+                "can i come with my grand mother",
+                "can i come with my girlfriend",
+                "can i come with my son",
+                "can i come with my grand father",
+                "can i come with my pet",
+                "can i come with my dog",
+                "can i come with my dogs",
+                "can i come with my birds",
+                "can i come with my parents",
+                "can i come with my neighborhoods",
+                "can i come with my sister",
+                "can i come with my son in law",
+                "can i come with children",
+                "ok, here we go",
+                "do you accept pets",
+                "do you accept dogs",
+                "do you accept cats",
+                "do you accept mascot",
+                "do you accept mascots",
+                "can i go with my work partners",
+                "can i celebrate my birthday there",
+                "can i celebrate my wedding there"
+            ],
+            "responses": [
+                "yes you can come with your human family members",
+                "Good ,unfortunatelly we dont acept pets",
+                "Hi there,yes of course, except animals"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [
+                "Bye",
+                "See you later",
+                "Goodbye"
+            ],
+            "responses": [
+                "See you later, thanks for visiting,if you need more tickets ask",
+                "Have a nice day,if you need more tickets ask",
+                "Bye! Come back again soon. if you need more tickets ask"
+            ]
+        },
+        {
+            "tag": "devices",
+            "patterns": [
+                "do you accept cellphones",
+                "do you accept protesis",
+                "do you accept chairwheels"
+            ],
+            "responses": [
+                "yes you can wear any device",
+                "yes, the games accept any signal device"
+            ]
+        },
+        {
+            "tag": "safe",
+            "patterns": [
+                "is it safe to use the games?",
+                "is it safe to use the attractions?",
+                "How safe are the attractions?",
+                "How safe is the roller coaster?",
+                "How safe is the Ferris wheel?",
+                "How safe is the haunted house?",
+                "How safe is the Ferris wheel?",
+                "How safe is the shooting gallery?",
+                "How safe are the flying cars?",
+                "How safe are the bumper cars?",
+                "How safe is the Chicago Ferris wheel?",
+                "How safe is the haunted house?",
+                "How safe are the bumper cars?",
+                "How safe are the attractions?",
+                "How safe are the mechanical rides?"
+            ],
+            "responses": [
+                "We have great security on our games, use them without problem",
+                "don't worry, the attractions have international safety standards",
+                "it is safe to use, and also fun"
+            ]
+        },
+        {
+            "tag": "thanks",
+            "patterns": [
+                "Thanks",
+                "Thank you",
+                "That's helpful"
+            ],
+            "responses": [
+                "Happy to help!",
+                "Any time!",
+                "My pleasure"
+            ]
+        },
+        {
+            "tag": "restroom",
+            "patterns": [
+                "where are the restroom",
+                "where are the bathroom",
+                "where can i do my thing"
+            ],
+            "responses": [
+                "go to the left and you will see the signal",
+                "go to the bottom left"
+            ]
+        },
+        {
+            "tag": "hours",
+            "patterns": [
+                "What hours are you open?",
+                "What are your schedule?",
+                "What time do they close",
+                "are you open saturdays",
+                "When are you open?",
+                "what time do you close"
+            ],
+            "responses": [
+                "We're open every day 9am-9pm",
+                "Our hours are 9am-9pm every day"
+            ]
+        },{
+"tag": "carpark3",
+"patterns": [
+"Hello, is there parking",
+"where do I leave the car",
+"Is there a place to leave the car",
+"Hello, is there parking for motorcycles",
+"Good morning, can I come by car",
+"Hello, good morning, is there parking",
+"if I leave late, is there parking to leave",
+"They charge for parking",
+"exist charge for parking car",
+"exist charge for parking bikes"
+],
+"responses": [
+"yes, of course, we have ample parking",
+"we have ample parking for cars and motorcycles",
+"parking charges 20 per hour for cars and 10 motorcycles",
+"hello, parking charges 20 per hour for cars and 10 motorcycles"
+],
+"context_set": ""
+
+},
+        {
+            "tag": "web",
+            "patterns": [
+                "what is your website",
+                "where are you located",
+                "what is your phone",
+                "what is your number to call",
+                "where i contact you",
+                "can i spoke with a manager"
+            ],
+            "responses": [
+                "we are located at florida, 33 street. ",
+                "our webiste is parkofatractions.com, wattsap 20384833-23"
+            ]
+        },
+        {
+            "tag": "lost",
+            "patterns": [
+                "i lost my pocket",
+                "i forgot my cellphone",
+                "i lost my wallet",
+                "i losted my ticket",
+                "i drop my wallet",
+                "i just lost my wallet"
+            ],
+            "responses": [
+                "go to the sections of objects lost/forgotten",
+                "ask guardian to guide you"
+            ]
+        },
+        {
+            "tag": "police",
+            "patterns": [
+                "I was robbed",
+                "They opened my car",
+                "They opened my coat",
+                "a guy hit me",
+                "a guy punch me in the face",
+                "a guy atack me",
+                "a guy atack us",
+                "can i call 911",
+                "can call cops"
+            ],
+            "responses": [
+                "sorry for that, you can call police",
+                "sorry,we can give you cameras of security"
+            ]
+        },
+        {
+            "tag": "payments",
+            "patterns": [
+                "Do you take credit cards?",
+                "Do you accept Mastercard?",
+                "Are you cash only?",
+                "Are you accept visa?",
+                "do you accept debit",
+                "do you accept cards for payment",
+                "can i pay with visa",
+                "can i pay with cash"
+            ],
+            "responses": [
+                "We accept VISA, Mastercard and AMEX and cash",
+                "We accept most major credit cards and cash",
+                "We accept cash and cards"
+            ]
+        },
+        {
+            "tag": "tickets",
+            "patterns": [
+                "how much the tickets",
+                "how much are the tickets?",
+                "how much are the Haunted house?",
+                "how much are the roller coaster?",
+                "how much are the wheel fortune?",
+                "how much are the Haunted house?",
+                "how much are the Ferris wheel?",
+                "how much are the Bumper cars?",
+                "how much  the tickets?",
+                "do i need to buy tickets",
+                "how much  the Haunted house?",
+                "how much  the roller coaster?",
+                "how much  the wheel fortune?",
+                "how much  the Haunted house?",
+                "how much  the Ferris wheel?",
+                "how much are the Bumper cars?",
+                "When i purchase tickets?",
+                "What kind of tickets are?"
+            ],
+            "responses": [
+                "the tickets are USD2 per atraction",
+                "tickets are all usd2 per atraction",
+                "yes you can buy here tickets, usd2 per atraction"
+            ]
+        },
+        {
+            "tag": "atractions",
+            "patterns": [
+                "What kind of atractions do you have?",
+                "what kind of games do you have",
+                "what atractions do you have",
+                "do you have roller coaster?",
+                "do you have wheel fortune?",
+                "do you have Haunted house?",
+                "do you have Ferris wheel?",
+                "do you have Shooting gallery?",
+                "do you Carousel?",
+                "do you Bumper cars?",
+                "what kind of atractions do you have",
+                "what kind of games do you have",
+                "can i see the games",
+                "what kind of atractions offer",
+                "how many atractions have"
+            ],
+            "responses": [
+                "we have Ferris wheel,Roller coaster,Haunted house,Shooting gallery,Carousel and Bumper cars",
+                "we offer a lot of games variety,please enter to see",
+                "we have fun games and stuff,please i invite you to come"
+            ]
+        },
+        {
+            "tag": "weather",
+            "patterns": [
+                "What will be weather?",
+                "What will be temperature?",
+                "hi there, what is the weather today",
+                " what is the weather "
+            ],
+            "responses": [
+                "weather will be : 40",
+                "it will be cloudy today",
+                "dont worry,is not going to rain",
+                "it will be snow today,I recommend you wrap up warm"
+            ]
+        },
+        {
+            "tag": "understand",
+            "patterns": [
+                "you are ugly",
+                "you are dumb"
+            ],
+            "responses": [
+                "sorry i didnt heard you",
+                "can you repeat the question please",
+                "has been a busy day, come again"
+            ]
+        },
+        {
+            "tag": "veter",
+            "patterns": [
+                "do you accept persons veterans",
+                "do you accept persons in wheelchairs",
+                "do you accept sick people",
+                "do you accept babies",
+                "do you accept persons of third age ",
+                "do you accept persons with disabilities ",
+                "ok, can i use an atractiones lonely"
+            ],
+            "responses": [
+                "yes, unfortunately they cannot use certain atractions",
+                "yes, unfortunately if ther are with disabilities cannot use atractions"
+            ]
+        },
+
+{
+"tag": "doctor",
+"patterns": [
+"is there health insurance?",
+"do you guys offer health insurance",
+"do i need to have health insurante to use games",
+"do i need to have health insurante to use atractions",
+"what do you do in case of an accident?",
+"what happens if I have an accident?",
+"I have had an accident",
+"a friend had an accident",
+"my mother got trapped and can't get out",
+"my relative had an accident with the cars",
+"my relative had an accident at a shooting gallery",
+"a friend had an accident with flying cars?",
+"a friend had an accident with bumper cars?",
+"a friend had an accident with the Chicago Wheels",
+"a friend had an accident at the haunted house",
+"a friend had an accident with the bumper cars"
+],
+"responses": [
+"we will call the paramedics",
+"I will call 911, don't worry",
+"we will take him to the hospital which is here"
+]
+},
+        {
+            "tag": "saludos",
+            "patterns": [
+                "Hola",
+                "¿Cómo estás?",
+                "¿Hay alguien ahí?",
+                "Hola",
+                "Buen día",
+                "hola buenos dias",
+                "hola buenas tardes",
+                "hola buenas noches",
+                "hola buen dia"
+            ],
+            "responses": [
+                "Hola, gracias por visitarnos",
+                "Es bueno verte de nuevo",
+                "Hola, ¿cómo puedo ayudarte?",
+                "hola,desea comprar tickets"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "preguntas",
+            "patterns": [
+                "puedo ir con mi familia",
+                "puedo ir con mis hijos",
+                "puedo ir con mi abuela",
+                "puedo ir con mi novia",
+                "puedo ir con mi hijo",
+                "puedo ir con mi abuelo",
+                "puedo ir con mi mascota",
+                "puedo ir con mi perro",
+                "puedo ir con mis perros",
+                "puedo ir con mis pájaros",
+                "acepta niños",
+                "aceptan animales",
+                "puedo venir con mi novio",
+                "puedo venir con mi novia",
+                "puedo venir con mi sobrino",
+                "puedo traer a mis hijos",
+                "pueden ir niños",
+                "puedo traer a mis nietos",
+                "puedo traer a mis nietas",
+                "puedo celebrar mi cumpleaños alli",
+                "puedo celebrar mi boda alli",
+                "puedo organizar un convivio alli",
+                "aceptan perros",
+                "aceptan gatos",
+                "aceptan loros",
+                "aceptan mascotas"
+            ],
+            "responses": [
+                "sí, puedes venir con los miembros humanos de tu familia",
+                "Bien, desafortunadamente no aceptamos mascotas",
+                "Hola, sí, por supuesto, excepto animales"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "adiós",
+            "patterns": [
+                "Adiós",
+                "Hasta luego",
+                "Adiós"
+            ],
+            "responses": [
+                "Hasta luego, gracias por visitarnos",
+                "Que tengas un buen día",
+                "¡Adiós! Vuelve pronto."
+            ]
+        },
+        {
+            "tag": "gracias",
+            "patterns": [
+                "Gracias",
+                "Gracias",
+                "Eso es útil"
+            ],
+            "responses": [
+                "¡Encantado de ayudar!",
+                "¡En cualquier momento!",
+                "Un placer"
+            ]
+        },
+        {
+            "tag": "horario",
+            "patterns": [
+                "¿A qué hora abres?",
+                "¿Cuál es tu horario?",
+                "¿A qué hora cierran?",
+                "¿Abre los sábados?",
+                "¿Cuándo abres?"
+            ],
+            "responses": [
+                "Estamos abiertos todos los días de 9:00 a 21:00 horas",
+                "Nuestro horario es de 9:00 a 21:00 horas todos los días"
+            ]
+        },
+        {
+            "tag": "dispositivos",
+            "patterns": [
+                "aceptan celulares",
+                "aceptan prótesis",
+                "aceptan sillas con ruedas"
+            ],
+            "responses": [
+                "sí, puedes entrar con cualquier dispositivo",
+                "sí, los juegos aceptan cualquier dispositivo de señal",
+                "si no hay problema si entras eso"
+            ]
+        },
+        {
+            "tag": "policía",
+            "patterns": [
+                "me robaron",
+                "abrieron mi coche",
+                "me abrieron el carro",
+                "abrieron mi abrigo",
+                "un tipo me golpeó",
+                "un tipo me dio un puñetazo en la cara",
+                "un tipo me atacó",
+                "un tipo nos atacó"
+            ],
+            "responses": [
+                "lo siento, puedes llamar a la policía",
+                "lo siento, podemos darte cámaras de seguridad"
+            ]
+        },
+        {
+            "tag": "web2",
+            "patterns": [
+                "cuál es su sitio web",
+                "dónde se encuentran ubicados",
+                "cuál es su teléfono",
+                "cuál es su direccion y telefono",
+                "cuál es su direccion",
+                "cuál es su número para llamar",
+                "me puede pasar a un supervisor",
+                "puedo hablar con el gerente"
+            ],
+            "responses": [
+                "estamos ubicados en florida, calle 33. ",
+                "nuestro sitio web es parkofatractions.com, wattsap 20384833-23"
+            ]
+        },
+        {
+            "tag": "pagos",
+            "patterns": [
+                "¿Aceptan tarjetas de crédito?",
+                "¿Aceptan Mastercard?",
+                "¿Solo aceptan efectivo?",
+                "¿Aceptan Visa?",
+                "Aceptan débito",
+                "Aceptan tarjetas para el pago",
+                "Puedo pagar con Visa",
+                "Puedo pagar en efectivo",
+                "¿Necesito comprar boletos?"
+            ],
+            "responses": [
+                "Aceptamos VISA, Mastercard y AMEX y efectivo",
+                "Aceptamos la mayoría de las tarjetas de crédito y efectivo",
+                "Aceptamos efectivo y tarjetas"
+            ]
+        },
+        {
+            "tag": "boletos",
+            "patterns": [
+                "¿Cuánto cuestan los boletos?",
+                "¿Cuándo compro los boletos?",
+                "¿Qué tipo de boletos son?"
+            ],
+            "responses": [
+                "Los boletos cuestan USD2 por atracción",
+                "Todos los boletos cuestan USD2 por atracción",
+                "Sí, puedes comprar entradas aquí, 2 USD por atracción"
+            ]
+        },
+{
+"tag": "comida",
+"patterns": [
+"venden comida",
+"puedo llevar comida",
+"puedo comprar comida adentro",
+"puedo entrar con comida",
+"venden comida"
+],
+"responses": [
+"tenemos restaurantes adentro donde puedes comprar comida",
+"desafortunadamente no permitimos comida, pero puedes comprar adentro"
+]
+},
+
+ {
+            "tag": "carpark",
+            "patterns": [
+                "Hola, hay parqueo",
+                "donde dejo el coche",
+                "¿Hay lugar donde dejar el carro",
+                "Hola, hay parqueo de motos",
+                "Buen día,puedo venir en carro",
+                "hola buenos dias,hay parqueo",
+                "si salgo tarde hay parqueo para salir",                
+"Cobran por aparcar",
+"Existen cobros por aparcar coches",
+"Existen cobros por aparcar motos"
+            ],
+            "responses": [
+                "si claro contamos con amplio parqueo",
+                "contamos con amplio parqueo para carros y motos",
+                "el parqueo se cobra 20 la hora carros y 10 motos",
+                 "hola,el parqueo se cobra 20 la hora carros y 10 motos"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "bano",
+            "patterns": [
+                "donde esta el baño",
+                "donde esta el baño",
+                "donde puedo hacer mis cosas"
+            ],
+            "responses": [
+                "ve a la izquierda y verás la señal",
+                "ve a la fondo a la derecha"
+            ]
+        },
+        {
+            "tag": "perdido",
+            "patterns": [
+                "perdí mi bolsillo",
+                "he perdido mi telefono",
+                "he perdido mi billetera",
+                "he perdido mis tickets",
+                "he perdido mis bolso",
+                "olvidé mi celular",
+                "perdí mi billetera",
+                "perdí mi boleto",
+                "se me cayó la billetera"
+            ],
+            "responses": [
+                "ir a la sección de objetos perdidos/olvidados",
+                "pedile a un guardian que te oriente"
+            ]
+        },
+        {
+            "tag": "atracciones",
+            "patterns": [
+                "¿Qué tipo de atracciones tienes?",
+                "¿Qué tipo de juegos tienes?",
+                "¿Qué atracciones tienes?",
+                "¿Tienes montaña rusa?",
+                "¿Tienes rueda de la fortuna?",
+                "¿Tienes casa embrujada?",
+                "¿Tienes noria?",
+                "¿Tienes galería de tiro?",
+                "¿Tienes autos voladores?",
+                "¿Tienes autos chocadores?",
+                "tienen rueda de chicago",
+                "tienen casa embrujada",
+                "tienen autos chocantes",
+                "tienen atracciones",
+                "tienen juegos mecanicos",
+                "puedo ver las atracciones",
+                "puedo ver los juegos"
+            ],
+            "responses": [
+                "Tenemos noria, montaña rusa, casa embrujada, galería de tiro, tiovivo y autos chocadores",
+                "Ofrecemos una gran variedad de juegos",
+                "Tenemos juegos divertidos y cosas así"
+            ]
+        },
+        {
+            "tag": "seguro",
+            "patterns": [
+                "¿es seguro usar los juegos?",
+                "¿es seguro usar las atracciones?",
+                "¿Qué seguridad tiene las atracciones?",
+                "¿Qué seguridad tiene montaña rusa?",
+                "¿Qué seguridad tiene rueda de la fortuna?",
+                "¿Qué seguridad tiene casa embrujada?",
+                "¿Qué seguridad tiene noria?",
+                "¿Qué seguridad tiene galería de tiro?",
+                "¿Qué seguridad tiene autos voladores?",
+                "¿Qué seguridad tiene autos chocadores?",
+                "Qué seguridad tiene rueda de chicago",
+                "Qué seguridad tiene casa embrujada",
+                "Qué seguridad tiene autos chocantes",
+                "Qué seguridad tienen las atracciones",
+                "Qué seguridad tiene los juegos mecanicos"
+            ],
+            "responses": [
+                "Tenemos una gran seguridad en nuestros juegos,uselos sin problema",
+                "no se preocupe, las atracciones cuentan con estandares de seguridad internacionales",
+                "si es seguro usarlo, y ademas divertido"
+            ]
+        },
+        {
+            "tag": "clima",
+            "patterns": [
+                "¿Qué tiempo hará?",
+                "¿Cuál será la temperatura?",
+                "¿Cuál será el clima hoy?",
+                "sera hoy un buen clima"
+            ],
+            "responses": [
+                "El tiempo será de : 40",
+                "Hoy estará nublado",
+                "No te preocupes, no va a llover",
+                "Hoy nevará, te recomiendo que te abrigues bien"
+            ]
+        },
+        {
+            "tag": "veter",
+            "patterns": [
+                "aceptan personas veteranas",
+                "aceptan ancianos",
+                "puedo venir con mis abuelitos",
+                "aceptan personas en silla de ruedas",
+                "aceptan personas enfermas",
+                "aceptan bebes",
+                "puedo entrar con mi bebe",
+                "aceptan personas con discapacidades",
+                "puedo usar las atracciones yo solo",
+                "puedo ir solo"
+            ],
+            "responses": [
+                "si, desafortunadamente no pueden usar ciertas atracciones",
+                "si, desafortunadamente si hay personas con discapacidades no pueden usar atracciones"
+            ]
+        }, {
+            "tag": "medico",
+            "patterns": [
+                "¿hay seguro medico?",
+                "¿que se hace en caso de accidente?",
+                "¿si me accidento que pasa?",
+                "si no tengo seguro medico puedo usar los juegos",
+                "necesito tener un seguro medico",
+                "he sufrido un accdiente",
+                "un amigo sufrio un accidente",
+                "mi mama se quedo atrapada no puede salir",
+                "mi familiar tuvo un accidente en los carros",
+                "mi familiar tuvo un accidente en galería de tiro",
+                "un amigo sufrio un accidente autos voladores?",
+                "un amigo sufrio un accidente autos chocadores?",
+                "un amigo sufrio un accidenterueda de chicago",
+                "Qun amigo sufrio un accidente en la casa embrujada",
+                "un amigo sufrio un accidente en los autos chocantes"
+            ],
+            "responses": [
+                "llamaremos a los paramedicos",
+                "llamare al 911 no se preocupe",
+                "lo llevaremos al hospital que esta aqui"
+            ]
+        },
+        {
+            "tag": "entiendo",
+            "patterns": [
+                "eres feo",
+                "eres tonto"
+            ],
+            "responses": [
+                "Lo siento, no te escuché",
+                "Puedes repetir la pregunta, por favor",
+                "Ha sido un día muy ajetreado, vuelve"
+            ]
+        }
+    ]
+}
