@@ -112,3 +112,8 @@ La función `predictResponse` utiliza el modelo entrenado para predecir la etiqu
 ## Conclusión
 
 Este chatbot es una implementación básica que puede extenderse para tareas más complejas, como la integración de procesamiento de lenguaje natural avanzado o la carga de modelos previamente entrenados. 
+
+## ANEXOS
+![image](https://github.com/user-attachments/assets/a0e94013-c363-4173-9956-e2492ce7d456)
+![image](https://github.com/user-attachments/assets/5cd285cc-59ce-4688-8efb-f94aeed8677f)
+
