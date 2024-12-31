@@ -1,0 +1,896 @@
+{
+        "intents": [
+                {
+                        "tag": "greeting",
+                        "patterns": [
+                                "Hi",
+                                "How are you",
+                                "Is anyone there?",
+                                "Hello",
+                                "Good day",
+                                "Hey",
+                                "What's up?",
+                                "How's it going?",
+                                "Hola",
+                                "Good morning",
+                                "Hello there"
+                        ],
+                        "responses": [
+                                "Hello, thanks for visiting",
+                                "Good to see you again",
+                                "Hi there, how can I help?"
+                        ]
+                },
+                {
+                        "tag": "goodbye",
+                        "patterns": [
+                                "Bye",
+                                "See you later",
+                                "Goodbye",
+                                "Take care",
+                                "See you soon",
+                                "Farewell",
+                                "Good night",
+                                "Catch you later"
+                        ],
+                        "responses": [
+                                "See you later, thanks for visiting",
+                                "Have a nice day",
+                                "Bye! Come back again soon."
+                        ]
+                },
+                {
+                        "tag": "thanks",
+                        "patterns": [
+                                "Thanks",
+                                "Thank you",
+                                "That's helpful",
+                                "Thanks a lot",
+                                "Thank you very much",
+                                "I appreciate it",
+                                "Thanks for the help",
+                                "Thanks for your assistance"
+                        ],
+                        "responses": [
+                                "Happy to help!",
+                                "Any time!",
+                                "My pleasure",
+                                "You're welcome!",
+                                "Glad I could help"
+                        ]
+                },
+                {
+                        "tag": "algorithm_sum",
+                        "patterns": [
+                                "How to sum two numbers in Python?",
+                                "Write a Python program to add two numbers",
+                                "Python sum example",
+                                "Show me how to add two numbers in Python",
+                                "Give me the code for adding two numbers in Python",
+                                "Can you write a Python code to sum two numbers?",
+                                "Python sum function",
+                                "Add numbers in Python",
+                                "Sum of two numbers in Python"
+                        ],
+                        "responses": [
+                                "Here is a simple Python program to sum two numbers:\n\n```python\n# Python program to add two numbers\nnum1 = 5\nnum2 = 3\nsum = num1 + num2\nprint('Sum:', sum)\n```",
+                                "You can sum two numbers in Python like this:\n\n```python\n# Add two numbers\nx = 10\ny = 20\nresult = x + y\nprint(result)\n```"
+                        ]
+                },
+                {
+                        "tag": "algorithm_sum_js",
+                        "patterns": [
+                                "How to sum two numbers in JavaScript?",
+                                "Write a JavaScript program to add two numbers",
+                                "JavaScript sum example",
+                                "Show me how to add two numbers in JavaScript",
+                                "Give me the code for adding two numbers in JavaScript",
+                                "Can you write a JavaScript code to sum two numbers?",
+                                "JavaScript sum function",
+                                "Add numbers in JavaScript",
+                                "Sum of two numbers in JavaScript"
+                        ],
+                        "responses": [
+                                "Here is a simple JavaScript program to sum two numbers:\n\n```javascript\n// JavaScript program to add two numbers\nlet num1 = 5;\nlet num2 = 3;\nlet sum = num1 + num2;\nconsole.log('Sum:', sum);\n```",
+                                "You can sum two numbers in JavaScript like this:\n\n```javascript\n// Sum two numbers\nlet a = 10;\nlet b = 20;\nlet result = a + b;\nconsole.log(result);\n```"
+                        ]
+                },
+                {
+                        "tag": "algorithm_factorial",
+                        "patterns": [
+                                "How to find factorial in Python?",
+                                "Write a Python program to calculate factorial",
+                                "Python factorial example",
+                                "How can I calculate the factorial of a number in Python?",
+                                "Give me a Python code for factorial",
+                                "Can you show me Python code for calculating factorial?",
+                                "Factorial function in Python",
+                                "How to calculate factorial using Python?"
+                        ],
+                        "responses": [
+                                "Here is a Python program to calculate the factorial of a number:\n\n```python\n# Python program to find factorial of a number\nnum = 5\nfactorial = 1\nif num < 0:\n    print('Factorial does not exist for negative numbers')\nelif num == 0:\n    print('Factorial of 0 is 1')\nelse:\n    for i in range(1, num + 1):\n        factorial *= i\n    print('Factorial:', factorial)\n```",
+                                "You can calculate the factorial in Python with this code:\n\n```python\n# Factorial in Python\ndef factorial(n):\n    if n == 0:\n        return 1\n    else:\n        return n * factorial(n-1)\nprint(factorial(5))\n```"
+                        ]
+                },
+                {
+                        "tag": "algorithm_factorial_js",
+                        "patterns": [
+                                "How to find factorial in JavaScript?",
+                                "Write a JavaScript program to calculate factorial",
+                                "JavaScript factorial example",
+                                "How can I calculate the factorial of a number in JavaScript?",
+                                "Give me a JavaScript code for factorial",
+                                "Can you show me JavaScript code for calculating factorial?",
+                                "Factorial function in JavaScript",
+                                "How to calculate factorial using JavaScript?"
+                        ],
+                        "responses": [
+                                "Here is a JavaScript program to calculate the factorial of a number:\n\n```javascript\n// JavaScript program to find factorial of a number\nlet num = 5;\nlet factorial = 1;\nif (num < 0) {\n    console.log('Factorial does not exist for negative numbers');\n} else if (num === 0) {\n    console.log('Factorial of 0 is 1');\n} else {\n    for (let i = 1; i <= num; i++) {\n        factorial *= i;\n    }\n    console.log('Factorial:', factorial);\n}\n```",
+                                "You can calculate the factorial in JavaScript like this:\n\n```javascript\n// Factorial in JavaScript\nfunction factorial(n) {\n    if (n === 0) {\n        return 1;\n    }\n    return n * factorial(n - 1);\n}\nconsole.log(factorial(5));\n```"
+                        ]
+                },
+                {
+                        "tag": "algorithm_fibonacci",
+                        "patterns": [
+                                "How to generate Fibonacci sequence in Python?",
+                                "Write a Python program to generate Fibonacci sequence",
+                                "Python Fibonacci example",
+                                "How can I generate Fibonacci series in Python?",
+                                "Give me the Python code for Fibonacci sequence",
+                                "Can you show me the Python code for Fibonacci numbers?",
+                                "Fibonacci series in Python",
+                                "How to write Fibonacci sequence function in Python?"
+                        ],
+                        "responses": [
+                                "Here is a Python program to generate the Fibonacci sequence:\n\n```python\n# Python program to generate Fibonacci sequence\nnterms = 10\nn1, n2 = 0, 1\ncount = 0\nif nterms <= 0:\n    print('Please enter a positive integer')\nelif nterms == 1:\n    print('Fibonacci sequence upto', nterms, ':', n1)\nelse:\n    print('Fibonacci sequence:\n')\n    while count < nterms:\n        print(n1)\n        nth = n1 + n2\n        n1 = n2\n        n2 = nth\n        count += 1\n```",
+                                "You can generate the Fibonacci sequence in Python with this code:\n\n```python\n# Fibonacci sequence in Python\ndef fibonacci(n):\n    a, b = 0, 1\n    while n > 0:\n        print(a, end=' ')\n        a, b = b, a + b\n        n -= 1\nfibonacci(10)\n```"
+                        ]
+                },
+                {
+                        "tag": "algorithm_fibonacci_js",
+                        "patterns": [
+                                "How to generate Fibonacci sequence in JavaScript?",
+                                "Write a JavaScript program to generate Fibonacci sequence",
+                                "JavaScript Fibonacci example",
+                                "How can I generate Fibonacci series in JavaScript?",
+                                "Give me the JavaScript code for Fibonacci sequence",
+                                "Can you show me the JavaScript code for Fibonacci numbers?",
+                                "Fibonacci series in JavaScript",
+                                "How to write Fibonacci sequence function in JavaScript?"
+                        ],
+                        "responses": [
+                                "Here is a JavaScript program to generate the Fibonacci sequence:\n\n```javascript\n// JavaScript program to generate Fibonacci sequence\nlet nterms = 10;\nlet n1 = 0, n2 = 1, nextTerm;\nif (nterms <= 0) {\n    console.log('Please enter a positive integer');\n} else if (nterms === 1) {\n    console.log('Fibonacci sequence upto', nterms, ':', n1);\n} else {\n    console.log('Fibonacci sequence:\n');\n    for (let i = 1; i <= nterms; i++) {\n        console.log(n1);\n        nextTerm = n1 + n2;\n        n1 = n2;\n        n2 = nextTerm;\n    }\n}\n```",
+                                "You can generate the Fibonacci sequence in JavaScript like this:\n\n```javascript\n// Fibonacci sequence in JavaScript\nfunction fibonacci(n) {\n    let a = 0, b = 1;\n    for (let i = 0; i < n; i++) {\n        console.log(a);\n        [a, b] = [b, a + b];\n    }\n}\nfibonacci(10);\n```"
+                        ]
+                },
+                {
+                        "tag": "algorithm_reverse_string",
+                        "patterns": [
+                                "How to reverse a string in Python?",
+                                "Write a Python program to reverse a string",
+                                "Python reverse string example",
+                                "How can I reverse a string in Python?",
+                                "Give me the Python code to reverse a string",
+                                "Can you show me Python code for reversing a string?",
+                                "Reverse a string in Python"
+                        ],
+                        "responses": [
+                                "Here is a Python program to reverse a string:\n\n```python\n# Python program to reverse a string\nstr = 'hello'\nreversed_str = str[::-1]\nprint('Reversed string:', reversed_str)\n```",
+                                "You can reverse a string in Python like this:\n\n```python\n# Reverse string in Python\ndef reverse_string(s):\n    return s[::-1]\nprint(reverse_string('hello'))\n```"
+                        ]
+                },
+                {
+                        "tag": "algorithm_reverse_string_js",
+                        "patterns": [
+                                "How to reverse a string in JavaScript?",
+                                "Write a JavaScript program to reverse a string",
+                                "JavaScript reverse string example",
+                                "How can I reverse a string in JavaScript?",
+                                "Give me the JavaScript code to reverse a string",
+                                "Can you show me JavaScript code for reversing a string?",
+                                "Reverse a string in JavaScript"
+                        ],
+                        "responses": [
+                                "Here is a JavaScript program to reverse a string:\n\n```javascript\n// JavaScript program to reverse a string\nlet str = 'hello';\nlet reversedStr = str.split('').reverse().join('');\nconsole.log('Reversed string:', reversedStr);\n```",
+                                "You can reverse a string in JavaScript like this:\n\n```javascript\n// Reverse string in JavaScript\nfunction reverseString(str) {\n    return str.split('').reverse().join('');\n}\nconsole.log(reverseString('hello'));\n```"
+                        ]
+                },
+                {
+                        "tag": "algorithm_palindrome",
+                        "patterns": [
+                                "How to check if a string is a palindrome in Python?",
+                                "Write a Python program to check palindrome",
+                                "Python palindrome example",
+                                "How can I check if a word is a palindrome in Python?",
+                                "Give me the Python code to check palindrome",
+                                "Can you show me Python code for palindrome check?",
+                                "Palindrome function in Python",
+                                "Check if a string is palindrome in Python"
+                        ],
+                        "responses": [
+                                "Here is a Python program to check if a string is a palindrome:\n\n```python\n# Python program to check palindrome\nstr = 'madam'\nif str == str[::-1]:\n    print('Palindrome')\nelse:\n    print('Not a palindrome')\n```",
+                                "You can check if a string is a palindrome in Python like this:\n\n```python\n# Check palindrome in Python\ndef is_palindrome(s):\n    return s == s[::-1]\nprint(is_palindrome('madam'))\n```"
+                        ]
+                },
+                {
+                        "tag": "algorithm_palindrome_js",
+                        "patterns": [
+                                "How to check if a string is a palindrome in JavaScript?",
+                                "Write a JavaScript program to check palindrome",
+                                "JavaScript palindrome example",
+                                "How can I check if a word is a palindrome in JavaScript?",
+                                "Give me the JavaScript code to check palindrome",
+                                "Can you show me JavaScript code for palindrome check?",
+                                "Palindrome function in JavaScript",
+                                "Check if a string is palindrome in JavaScript"
+                        ],
+                        "responses": [
+                                "Here is a JavaScript program to check if a string is a palindrome:\n\n```javascript\n// JavaScript program to check palindrome\nlet str = 'madam';\nif (str === str.split('').reverse().join('')) {\n    console.log('Palindrome');\n} else {\n    console.log('Not a palindrome');\n}\n```",
+                                "You can check if a string is a palindrome in JavaScript like this:\n\n```javascript\n// Check palindrome in JavaScript\nfunction isPalindrome(str) {\n    return str === str.split('').reverse().join('');\n}\nconsole.log(isPalindrome('madam'));\n```"
+                        ]
+                },
+                {
+                        "tag": "algorithm_maximum",
+                        "patterns": [
+                                "How to find the maximum number in a list in Python?",
+                                "Write a Python program to find the largest number in a list",
+                                "Python max number example",
+                                "How can I find the maximum number in a list in Python?",
+                                "Give me the Python code to find the maximum number",
+                                "Can you show me Python code for finding the maximum number?",
+                                "Find the largest number in Python",
+                                "Max number in Python"
+                        ],
+                        "responses": [
+                                "Here is a Python program to find the maximum number in a list:\n\n```python\n# Python program to find the maximum number\nnumbers = [10, 20, 30, 50, 40]\nmax_num = max(numbers)\nprint('The largest number is:', max_num)\n```",
+                                "You can find the maximum number in Python like this:\n\n```python\n# Max number in Python\nnumbers = [5, 3, 8, 2, 9]\nprint(max(numbers))\n```"
+                        ]
+                },
+                {
+                        "tag": "algorithm_maximum_js",
+                        "patterns": [
+                                "How to find the maximum number in an array in JavaScript?",
+                                "Write a JavaScript program to find the largest number in an array",
+                                "JavaScript max number example",
+                                "How can I find the maximum number in an array in JavaScript?",
+                                "Give me the JavaScript code to find the maximum number",
+                                "Can you show me JavaScript code for finding the maximum number?",
+                                "Find the largest number in JavaScript",
+                                "Max number in JavaScript"
+                        ],
+                        "responses": [
+                                "Here is a JavaScript program to find the maximum number in an array:\n\n```javascript\n// JavaScript program to find the maximum number\nlet numbers = [10, 20, 30, 50, 40];\nlet maxNum = Math.max(...numbers);\nconsole.log('The largest number is:', maxNum);\n```",
+                                "You can find the maximum number in JavaScript like this:\n\n```javascript\n// Max number in JavaScript\nlet numbers = [5, 3, 8, 2, 9];\nconsole.log(Math.max(...numbers));\n```"
+                        ]
+                },
+                {
+                        "tag": "algorithm_swap",
+                        "patterns": [
+                                "How to swap two numbers in Python?",
+                                "Write a Python program to swap two numbers",
+                                "Python swap example",
+                                "How can I swap two variables in Python?",
+                                "Give me the Python code to swap numbers",
+                                "Can you show me Python code for swapping two numbers?",
+                                "Swap two numbers in Python"
+                        ],
+                        "responses": [
+                                "Here is a Python program to swap two numbers:\n\n```python\n# Python program to swap two numbers\na = 5\nb = 10\n# swapping\na, b = b, a\nprint('a:', a, 'b:', b)\n```",
+                                "You can swap two numbers in Python like this:\n\n```python\n# Swap two numbers\nx = 5\ny = 10\nx, y = y, x\nprint(x, y)\n```"
+                        ]
+                },
+                {
+                        "tag": "algorithm_swap_js",
+                        "patterns": [
+                                "How to swap two numbers in JavaScript?",
+                                "Write a JavaScript program to swap two numbers",
+                                "JavaScript swap example",
+                                "How can I swap two variables in JavaScript?",
+                                "Give me the JavaScript code to swap numbers",
+                                "Can you show me JavaScript code for swapping two numbers?",
+                                "Swap two numbers in JavaScript"
+                        ],
+                        "responses": [
+                                "Here is a JavaScript program to swap two numbers:\n\n```javascript\n// JavaScript program to swap two numbers\nlet a = 5;\nlet b = 10;\n[a, b] = [b, a];\nconsole.log('a:', a, 'b:', b);\n```",
+                                "You can swap two numbers in JavaScript like this:\n\n```javascript\n// Swap two numbers\nlet x = 5;\nlet y = 10;\n[x, y] = [y, x];\nconsole.log(x, y);\n```"
+                        ]
+                },
+                {
+                        "tag": "algorithm_sum_of_digits",
+                        "patterns": [
+                                "How to find the sum of digits in Python?",
+                                "Write a Python program to calculate sum of digits",
+                                "Python program for sum of digits",
+                                "Calculate sum of digits in Python",
+                                "Python code for summing digits of a number"
+                        ],
+                        "responses": [
+                                "Here is a Python program to find the sum of digits of a number:\n\n```python\n# Python program to find the sum of digits\n\ndef sum_of_digits(n):\n    return sum(int(digit) for digit in str(n))\n\nprint(sum_of_digits(1234))  # 10\n```"
+                        ]
+                },
+                {
+                        "tag": "algorithm_sum_of_digits_js",
+                        "patterns": [
+                                "How to find the sum of digits in JavaScript?",
+                                "Write a JavaScript program to calculate sum of digits",
+                                "JavaScript program for sum of digits",
+                                "Calculate sum of digits in JavaScript",
+                                "JavaScript code for summing digits of a number"
+                        ],
+                        "responses": [
+                                "Here is a JavaScript program to find the sum of digits of a number:\n\n```javascript\n// JavaScript program to find the sum of digits\nfunction sumOfDigits(num) {\n    return num.toString().split('').reduce((sum, digit) => sum + parseInt(digit), 0);\n}\nconsole.log(sumOfDigits(1234));  // 10\n```"
+                        ]
+                },
+                {
+                        "tag": "algorithm_power",
+                        "patterns": [
+                                "How to find the power of a number in Python?",
+                                "Write a Python program to calculate power",
+                                "Python program to find power of a number",
+                                "Calculate power in Python",
+                                "Python code for exponentiation"
+                        ],
+                        "responses": [
+                                "Here is a Python program to find the power of a number:\n\n```python\n# Python program to calculate power\n\ndef power(base, exp):\n    return base ** exp\n\nprint(power(2, 3))  # 8\n```"
+                        ]
+                },
+                {
+                        "tag": "algorithm_power_js",
+                        "patterns": [
+                                "How to find the power of a number in JavaScript?",
+                                "Write a JavaScript program to calculate power",
+                                "JavaScript program to find power of a number",
+                                "Calculate power in JavaScript",
+                                "JavaScript code for exponentiation"
+                        ],
+                        "responses": [
+                                "Here is a JavaScript program to find the power of a number:\n\n```javascript\n// JavaScript program to calculate power\nfunction power(base, exp) {\n    return Math.pow(base, exp);\n}\nconsole.log(power(2, 3));  // 8\n```"
+                        ]
+                },
+                {
+                        "tag": "algorithm_lcm",
+                        "patterns": [
+                                "How to find LCM in Python?",
+                                "Write a Python program to calculate LCM",
+                                "Python program for Least Common Multiple",
+                                "Calculate LCM in Python",
+                                "Python code for finding LCM"
+                        ],
+                        "responses": [
+                                "Here is a Python program to find the LCM of two numbers:\n\n```python\n# Python program to find LCM of two numbers\n\ndef lcm(a, b):\n    greater = max(a, b)\n    while True:\n        if greater % a == 0 and greater % b == 0:\n            return greater\n        greater += 1\n\nprint(lcm(4, 5))  # 20\n```"
+                        ]
+                },
+                {
+                        "tag": "algorithm_lcm_js",
+                        "patterns": [
+                                "How to find LCM in JavaScript?",
+                                "Write a JavaScript program to calculate LCM",
+                                "JavaScript program for Least Common Multiple",
+                                "Calculate LCM in JavaScript",
+                                "JavaScript code for finding LCM"
+                        ],
+                        "responses": [
+                                "Here is a JavaScript program to find the LCM of two numbers:\n\n```javascript\n// JavaScript program to find LCM of two numbers\nfunction lcm(a, b) {\n    let greater = Math.max(a, b);\n    while (true) {\n        if (greater % a === 0 && greater % b === 0) {\n            return greater;\n        }\n        greater++;\n    }\n}\nconsole.log(lcm(4, 5));  // 20\n```"
+                        ]
+                },
+                {
+                        "tag": "algorithm_gcd",
+                        "patterns": [
+                                "How to find GCD in Python?",
+                                "Write a Python program to calculate GCD",
+                                "Python program for Greatest Common Divisor",
+                                "Calculate GCD in Python",
+                                "Python code for finding GCD"
+                        ],
+                        "responses": [
+                                "Here is a Python program to find the GCD of two numbers:\n\n```python\n# Python program to find GCD of two numbers\n\ndef gcd(a, b):\n    while b != 0:\n        a, b = b, a % b\n    return a\n\nprint(gcd(12, 18))  # 6\n```"
+                        ]
+                },
+                {
+                        "tag": "algorithm_gcd_js",
+                        "patterns": [
+                                "How to find GCD in JavaScript?",
+                                "Write a JavaScript program to calculate GCD",
+                                "JavaScript program for Greatest Common Divisor",
+                                "Calculate GCD in JavaScript",
+                                "JavaScript code for finding GCD"
+                        ],
+                        "responses": [
+                                "Here is a JavaScript program to find the GCD of two numbers:\n\n```javascript\n// JavaScript program to find GCD of two numbers\nfunction gcd(a, b) {\n    while (b !== 0) {\n        let temp = b;\n        b = a % b;\n        a = temp;\n    }\n    return a;\n}\nconsole.log(gcd(12, 18));  // 6\n```"
+                        ]
+                },
+                {
+                        "tag": "algorithm_even_odd",
+                        "patterns": [
+                                "How to check if a number is even or odd in Python?",
+                                "Write a Python program to check even or odd",
+                                "Python program to check even or odd",
+                                "Check if a number is even or odd in Python"
+                        ],
+                        "responses": [
+                                "Here is a Python program to check if a number is even or odd:\n\n```python\n# Python program to check if a number is even or odd\n\ndef even_odd(n):\n    if n % 2 == 0:\n        return 'Even'\n    else:\n        return 'Odd'\n\nprint(even_odd(4))  # Even\n```"
+                        ]
+                },
+                {
+                        "tag": "algorithm_even_odd_js",
+                        "patterns": [
+                                "How to check if a number is even or odd in JavaScript?",
+                                "Write a JavaScript program to check even or odd",
+                                "JavaScript program to check even or odd",
+                                "Check if a number is even or odd in JavaScript"
+                        ],
+                        "responses": [
+                                "Here is a JavaScript program to check if a number is even or odd:\n\n```javascript\n// JavaScript program to check if a number is even or odd\nfunction evenOdd(num) {\n    return num % 2 === 0 ? 'Even' : 'Odd';\n}\nconsole.log(evenOdd(4));  // Even\n```"
+                        ]
+                },
+                {
+                        "tag": "algorithm_area_of_circle",
+                        "patterns": [
+                                "How to calculate area of circle in Python?",
+                                "Write a Python program to calculate area of circle",
+                                "Python program for area of circle",
+                                "Calculate area of circle in Python"
+                        ],
+                        "responses": [
+                                "Here is a Python program to calculate the area of a circle:\n\n```python\n# Python program to calculate area of a circle\nimport math\n\ndef area_of_circle(radius):\n    return math.pi * radius ** 2\n\nprint(area_of_circle(5))  # 78.53981633974483\n```"
+                        ]
+                },
+                {
+                        "tag": "algorithm_area_of_circle_js",
+                        "patterns": [
+                                "How to calculate area of circle in JavaScript?",
+                                "Write a JavaScript program to calculate area of circle",
+                                "JavaScript program for area of circle",
+                                "Calculate area of circle in JavaScript"
+                        ],
+                        "responses": [
+                                "Here is a JavaScript program to calculate the area of a circle:\n\n```javascript\n// JavaScript program to calculate area of a circle\nfunction areaOfCircle(radius) {\n    return Math.PI * radius * radius;\n}\nconsole.log(areaOfCircle(5));  // 78.53981633974483\n```"
+                        ]
+                },
+                {
+                        "tag": "saludo",
+                        "patterns": [
+                                "Hola",
+                                "¿Cómo estás?",
+                                "¿Hay alguien ahí?",
+                                "Hola, ¿qué tal?",
+                                "Buen día",
+                                "¿Qué tal?",
+                                "¿Cómo va todo?",
+                                "¿Qué pasa?",
+                                "Buenos días",
+                                "Hola, ¿cómo estás?"
+                        ],
+                        "responses": [
+                                "Hola, gracias por visitarnos",
+                                "Qué bueno verte de nuevo",
+                                "Hola, ¿cómo puedo ayudarte?"
+                        ]
+                },
+                {
+                        "tag": "despedida",
+                        "patterns": [
+                                "Adiós",
+                                "Nos vemos luego",
+                                "Hasta luego",
+                                "Cuídate",
+                                "Hasta pronto",
+                                "Despedida",
+                                "Buenas noches",
+                                "Nos vemos"
+                        ],
+                        "responses": [
+                                "Nos vemos, gracias por visitarnos",
+                                "Que tengas un buen día",
+                                "¡Adiós! Vuelve pronto."
+                        ]
+                },
+                {
+                        "tag": "agradecimiento",
+                        "patterns": [
+                                "Gracias",
+                                "Muchas gracias",
+                                "Eso es útil",
+                                "Muchas gracias por tu ayuda",
+                                "Te lo agradezco",
+                                "Gracias por la ayuda",
+                                "Gracias por tu asistencia"
+                        ],
+                        "responses": [
+                                "¡Con gusto!",
+                                "¡En cualquier momento!",
+                                "¡Es un placer!",
+                                "¡De nada!",
+                                "Me alegra poder ayudarte"
+                        ]
+                },
+                {
+                        "tag": "algoritmo_suma",
+                        "patterns": [
+                                "¿Cómo sumar dos números en Python?",
+                                "Escribe un programa en Python para sumar dos números",
+                                "Ejemplo de suma en Python",
+                                "Muéstrame cómo sumar dos números en Python",
+                                "Dame el código para sumar dos números en Python",
+                                "¿Puedes escribir un código en Python para sumar dos números?",
+                                "Función de suma en Python",
+                                "Sumar números en Python",
+                                "Suma de dos números en Python"
+                        ],
+                        "responses": [
+                                "Aquí tienes un programa simple en Python para sumar dos números:\n\n```python\n# Programa en Python para sumar dos números\nnum1 = 5\nnum2 = 3\nsuma = num1 + num2\nprint('Suma:', suma)\n```",
+                                "Puedes sumar dos números en Python de esta manera:\n\n```python\n# Sumar dos números\nx = 10\ny = 20\nresultado = x + y\nprint(resultado)\n```"
+                        ]
+                },
+                {
+                        "tag": "algoritmo_suma_js",
+                        "patterns": [
+                                "¿Cómo sumar dos números en JavaScript?",
+                                "Escribe un programa en JavaScript para sumar dos números",
+                                "Ejemplo de suma en JavaScript",
+                                "Muéstrame cómo sumar dos números en JavaScript",
+                                "Dame el código para sumar dos números en JavaScript",
+                                "¿Puedes escribir un código en JavaScript para sumar dos números?",
+                                "Función de suma en JavaScript",
+                                "Sumar números en JavaScript",
+                                "Suma de dos números en JavaScript"
+                        ],
+                        "responses": [
+                                "Aquí tienes un programa simple en JavaScript para sumar dos números:\n\n```javascript\n// Programa en JavaScript para sumar dos números\nlet num1 = 5;\nlet num2 = 3;\nlet suma = num1 + num2;\nconsole.log('Suma:', suma);\n```",
+                                "Puedes sumar dos números en JavaScript de esta manera:\n\n```javascript\n// Sumar dos números\nlet a = 10;\nlet b = 20;\nlet resultado = a + b;\nconsole.log(resultado);\n```"
+                        ]
+                },
+                {
+                        "tag": "algoritmo_factorial",
+                        "patterns": [
+                                "¿Cómo calcular el factorial en Python?",
+                                "Escribe un programa en Python para calcular el factorial",
+                                "Ejemplo de factorial en Python",
+                                "¿Cómo puedo calcular el factorial de un número en Python?",
+                                "Dame un código en Python para calcular el factorial",
+                                "¿Puedes mostrarme el código en Python para calcular el factorial?",
+                                "Función factorial en Python",
+                                "¿Cómo calcular el factorial usando Python?"
+                        ],
+                        "responses": [
+                                "Aquí tienes un programa en Python para calcular el factorial de un número:\n\n```python\n# Programa en Python para encontrar el factorial de un número\nnum = 5\nfactorial = 1\nif num < 0:\n    print('El factorial no existe para números negativos')\nelif num == 0:\n    print('El factorial de 0 es 1')\nelse:\n    for i in range(1, num + 1):\n        factorial *= i\n    print('Factorial:', factorial)\n```",
+                                "Puedes calcular el factorial en Python con este código:\n\n```python\n# Factorial en Python\ndef factorial(n):\n    if n == 0:\n        return 1\n    else:\n        return n * factorial(n-1)\nprint(factorial(5))\n```"
+                        ]
+                },
+                {
+                        "tag": "algoritmo_factorial_js",
+                        "patterns": [
+                                "¿Cómo calcular el factorial en JavaScript?",
+                                "Escribe un programa en JavaScript para calcular el factorial",
+                                "Ejemplo de factorial en JavaScript",
+                                "¿Cómo puedo calcular el factorial de un número en JavaScript?",
+                                "Dame un código en JavaScript para calcular el factorial",
+                                "¿Puedes mostrarme el código en JavaScript para calcular el factorial?",
+                                "Función factorial en JavaScript",
+                                "¿Cómo calcular el factorial usando JavaScript?"
+                        ],
+                        "responses": [
+                                "Aquí tienes un programa en JavaScript para calcular el factorial de un número:\n\n```javascript\n// Programa en JavaScript para encontrar el factorial de un número\nlet num = 5;\nlet factorial = 1;\nif (num < 0) {\n    console.log('El factorial no existe para números negativos');\n} else if (num === 0) {\n    console.log('El factorial de 0 es 1');\n} else {\n    for (let i = 1; i <= num; i++) {\n        factorial *= i;\n    }\n    console.log('Factorial:', factorial);\n}\n```",
+                                "Puedes calcular el factorial en JavaScript de esta manera:\n\n```javascript\n// Factorial en JavaScript\nfunction factorial(n) {\n    if (n === 0) {\n        return 1;\n    }\n    return n * factorial(n - 1);\n}\nconsole.log(factorial(5));\n```"
+                        ]
+                },
+                {
+                        "tag": "algoritmo_fibonacci",
+                        "patterns": [
+                                "¿Cómo generar la secuencia de Fibonacci en Python?",
+                                "Escribe un programa en Python para generar la secuencia de Fibonacci",
+                                "Ejemplo de Fibonacci en Python",
+                                "¿Cómo puedo generar la serie de Fibonacci en Python?",
+                                "Dame el código en Python para la secuencia de Fibonacci",
+                                "¿Puedes mostrarme el código en Python para los números de Fibonacci?",
+                                "Secuencia de Fibonacci en Python",
+                                "¿Cómo escribir una función para la secuencia de Fibonacci en Python?"
+                        ],
+                        "responses": [
+                                "Aquí tienes un programa en Python para generar la secuencia de Fibonacci:\n\n```python\n# Programa en Python para generar la secuencia de Fibonacci\nnterms = 10\nn1, n2 = 0, 1\ncount = 0\nif nterms <= 0:\n    print('Por favor ingresa un número entero positivo')\nelif nterms == 1:\n    print('Secuencia de Fibonacci hasta', nterms, ':', n1)\nelse:\n    print('Secuencia de Fibonacci:\n')\n    while count < nterms:\n        print(n1)\n        nth = n1 + n2\n        n1 = n2\n        n2 = nth\n        count += 1\n```",
+                                "Puedes generar la secuencia de Fibonacci en Python con este código:\n\n```python\n# Secuencia de Fibonacci en Python\ndef fibonacci(n):\n    a, b = 0, 1\n    while n > 0:\n        print(a, end=' ')\n        a, b = b, a + b\n        n -= 1\nfibonacci(10)\n```"
+                        ]
+                },
+                {
+                        "tag": "algoritmo_fibonacci_js",
+                        "patterns": [
+                                "¿Cómo generar la secuencia de Fibonacci en JavaScript?",
+                                "Escribe un programa en JavaScript para generar la secuencia de Fibonacci",
+                                "Ejemplo de Fibonacci en JavaScript",
+                                "¿Cómo puedo generar la serie de Fibonacci en JavaScript?",
+                                "Dame el código en JavaScript para la secuencia de Fibonacci",
+                                "¿Puedes mostrarme el código en JavaScript para los números de Fibonacci?",
+                                "Secuencia de Fibonacci en JavaScript",
+                                "¿Cómo escribir una función para la secuencia de Fibonacci en JavaScript?"
+                        ],
+                        "responses": [
+                                "Aquí tienes un programa en JavaScript para generar la secuencia de Fibonacci:\n\n```javascript\n// Programa en JavaScript para generar la secuencia de Fibonacci\nlet nterms = 10;\nlet n1 = 0, n2 = 1, nextTerm;\nif (nterms <= 0) {\n    console.log('Por favor ingresa un número entero positivo');\n} else if (nterms === 1) {\n    console.log('Secuencia de Fibonacci hasta', nterms, ':', n1);\n} else {\n    console.log('Secuencia de Fibonacci:\n');\n    for (let i = 1; i <= nterms; i++) {\n        console.log(n1);\n        nextTerm = n1 + n2;\n        n1 = n2;\n        n2 = nextTerm;\n    }\n}\n```",
+                                "Puedes generar la secuencia de Fibonacci en JavaScript de esta manera:\n\n```javascript\n// Secuencia de Fibonacci en JavaScript\nfunction fibonacci(n) {\n    let a = 0, b = 1;\n    for (let i = 0; i < n; i++) {\n        console.log(a);\n        [a, b] = [b, a + b];\n    }\n}\nfibonacci(10);\n```"
+                        ]
+                },
+                {
+                        "tag": "algoritmo_reverse_string",
+                        "patterns": [
+                                "¿Cómo revertir una cadena en Python?",
+                                "Escribe un programa en Python para revertir una cadena",
+                                "Ejemplo de revertir cadena en Python",
+                                "¿Cómo puedo revertir una cadena en Python?",
+                                "Dame el código en Python para revertir una cadena",
+                                "¿Puedes mostrarme el código en Python para revertir una cadena?",
+                                "Revertir una cadena en Python"
+                        ],
+                        "responses": [
+                                "Aquí tienes un programa en Python para revertir una cadena:\n\n```python\n# Programa en Python para revertir una cadena\nstr = 'hola'\nreversed_str = str[::-1]\nprint('Cadena revertida:', reversed_str)\n```",
+                                "Puedes revertir una cadena en Python de esta manera:\n\n```python\n# Revertir cadena en Python\ndef reverse_string(s):\n    return s[::-1]\nprint(reverse_string('hola'))\n```"
+                        ]
+                },
+                {
+                        "tag": "algoritmo_reverse_string_js",
+                        "patterns": [
+                                "¿Cómo revertir una cadena en JavaScript?",
+                                "Escribe un programa en JavaScript para revertir una cadena",
+                                "Ejemplo de revertir cadena en JavaScript",
+                                "¿Cómo puedo revertir una cadena en JavaScript?",
+                                "Dame el código en JavaScript para revertir una cadena",
+                                "¿Puedes mostrarme el código en JavaScript para revertir una cadena?",
+                                "Revertir una cadena en JavaScript"
+                        ],
+                        "responses": [
+                                "Aquí tienes un programa en JavaScript para revertir una cadena:\n\n```javascript\n// Programa en JavaScript para revertir una cadena\nlet str = 'hola';\nlet reversedStr = str.split('').reverse().join('');\nconsole.log('Cadena revertida:', reversedStr);\n```",
+                                "Puedes revertir una cadena en JavaScript de esta manera:\n\n```javascript\n// Revertir cadena en JavaScript\nfunction reverseString(str) {\n    return str.split('').reverse().join('');\n}\nconsole.log(reverseString('hola'));\n```"
+                        ]
+                },
+                {
+                        "tag": "algoritmo_palindrome",
+                        "patterns": [
+                                "¿Cómo comprobar si una cadena es un palíndromo en Python?",
+                                "Escribe un programa en Python para verificar palíndromos",
+                                "Ejemplo de palíndromo en Python",
+                                "¿Cómo puedo verificar si una palabra es un palíndromo en Python?",
+                                "Dame el código en Python para comprobar si es palíndromo",
+                                "¿Puedes mostrarme el código en Python para verificar si es palíndromo?",
+                                "Función para palíndromos en Python",
+                                "Verificar si una cadena es palíndromo en Python"
+                        ],
+                        "responses": [
+                                "Aquí tienes un programa en Python para verificar si una cadena es un palíndromo:\n\n```python\n# Programa en Python para verificar si una cadena es un palíndromo\nstr = 'madam'\nif str == str[::-1]:\n    print('Es un palíndromo')\nelse:\n    print('No es un palíndromo')\n```",
+                                "Puedes verificar si una cadena es un palíndromo en Python de esta manera:\n\n```python\n# Verificar palíndromo en Python\ndef is_palindrome(s):\n    return s == s[::-1]\nprint(is_palindrome('madam'))\n```"
+                        ]
+                },
+                {
+                        "tag": "algoritmo_palindrome_js",
+                        "patterns": [
+                                "¿Cómo comprobar si una cadena es un palíndromo en JavaScript?",
+                                "Escribe un programa en JavaScript para verificar palíndromos",
+                                "Ejemplo de palíndromo en JavaScript",
+                                "¿Cómo puedo verificar si una palabra es un palíndromo en JavaScript?",
+                                "Dame el código en JavaScript para comprobar si es palíndromo",
+                                "¿Puedes mostrarme el código en JavaScript para verificar si es palíndromo?",
+                                "Función para palíndromos en JavaScript",
+                                "Verificar si una cadena es palíndromo en JavaScript"
+                        ],
+                        "responses": [
+                                "Aquí tienes un programa en JavaScript para verificar si una cadena es un palíndromo:\n\n```javascript\n// Programa en JavaScript para verificar si una cadena es un palíndromo\nlet str = 'madam';\nif (str === str.split('').reverse().join('')) {\n    console.log('Es un palíndromo');\n} else {\n    console.log('No es un palíndromo');\n}\n```",
+                                "Puedes verificar si una cadena es un palíndromo en JavaScript de esta manera:\n\n```javascript\n// Verificar palíndromo en JavaScript\nfunction isPalindrome(str) {\n    return str === str.split('').reverse().join('');\n}\nconsole.log(isPalindrome('madam'));\n```"
+                        ]
+                },
+                {
+                        "tag": "algoritmo_maximo",
+                        "patterns": [
+                                "¿Cómo encontrar el número máximo en una lista en Python?",
+                                "Escribe un programa en Python para encontrar el número más grande en una lista",
+                                "Ejemplo de número máximo en Python",
+                                "¿Cómo puedo encontrar el número máximo en una lista en Python?",
+                                "Dame el código en Python para encontrar el número máximo",
+                                "¿Puedes mostrarme el código en Python para encontrar el número máximo?",
+                                "Encontrar el número más grande en Python",
+                                "Número máximo en Python"
+                        ],
+                        "responses": [
+                                "Aquí tienes un programa en Python para encontrar el número máximo en una lista:\n\n```python\n# Programa en Python para encontrar el número máximo\nnumbers = [10, 20, 30, 50, 40]\nmax_num = max(numbers)\nprint('El número más grande es:', max_num)\n```",
+                                "Puedes encontrar el número máximo en Python así:\n\n```python\n# Número máximo en Python\nnumbers = [5, 3, 8, 2, 9]\nprint(max(numbers))\n```"
+                        ]
+                },
+                {
+                        "tag": "algoritmo_maximo_js",
+                        "patterns": [
+                                "¿Cómo encontrar el número máximo en un arreglo en JavaScript?",
+                                "Escribe un programa en JavaScript para encontrar el número más grande en un arreglo",
+                                "Ejemplo de número máximo en JavaScript",
+                                "¿Cómo puedo encontrar el número máximo en un arreglo en JavaScript?",
+                                "Dame el código en JavaScript para encontrar el número máximo",
+                                "¿Puedes mostrarme el código en JavaScript para encontrar el número máximo?",
+                                "Encontrar el número más grande en JavaScript",
+                                "Número máximo en JavaScript"
+                        ],
+                        "responses": [
+                                "Aquí tienes un programa en JavaScript para encontrar el número máximo en un arreglo:\n\n```javascript\n// Programa en JavaScript para encontrar el número máximo\nlet numbers = [10, 20, 30, 50, 40];\nlet maxNum = Math.max(...numbers);\nconsole.log('El número más grande es:', maxNum);\n```",
+                                "Puedes encontrar el número máximo en JavaScript así:\n\n```javascript\n// Número máximo en JavaScript\nlet numbers = [5, 3, 8, 2, 9];\nconsole.log(Math.max(...numbers));\n```"
+                        ]
+                },
+                {
+                        "tag": "algoritmo_intercambio",
+                        "patterns": [
+                                "¿Cómo intercambiar dos números en Python?",
+                                "Escribe un programa en Python para intercambiar dos números",
+                                "Ejemplo de intercambio en Python",
+                                "¿Cómo puedo intercambiar dos variables en Python?",
+                                "Dame el código en Python para intercambiar números",
+                                "¿Puedes mostrarme el código en Python para intercambiar dos números?",
+                                "Intercambiar dos números en Python"
+                        ],
+                        "responses": [
+                                "Aquí tienes un programa en Python para intercambiar dos números:\n\n```python\n# Programa en Python para intercambiar dos números\na = 5\nb = 10\n# intercambio\na, b = b, a\nprint('a:', a, 'b:', b)\n```",
+                                "Puedes intercambiar dos números en Python así:\n\n```python\n# Intercambiar dos números\nx = 5\ny = 10\nx, y = y, x\nprint(x, y)\n```"
+                        ]
+                },
+                {
+                        "tag": "algoritmo_intercambio_js",
+                        "patterns": [
+                                "¿Cómo intercambiar dos números en JavaScript?",
+                                "Escribe un programa en JavaScript para intercambiar dos números",
+                                "Ejemplo de intercambio en JavaScript",
+                                "¿Cómo puedo intercambiar dos variables en JavaScript?",
+                                "Dame el código en JavaScript para intercambiar números",
+                                "¿Puedes mostrarme el código en JavaScript para intercambiar dos números?",
+                                "Intercambiar dos números en JavaScript"
+                        ],
+                        "responses": [
+                                "Aquí tienes un programa en JavaScript para intercambiar dos números:\n\n```javascript\n// Programa en JavaScript para intercambiar dos números\nlet a = 5;\nlet b = 10;\n[a, b] = [b, a];\nconsole.log('a:', a, 'b:', b);\n```",
+                                "Puedes intercambiar dos números en JavaScript así:\n\n```javascript\n// Intercambiar dos números\nlet x = 5;\nlet y = 10;\n[x, y] = [y, x];\nconsole.log(x, y);\n```"
+                        ]
+                },
+                {
+                        "tag": "algoritmo_suma_de_digitos",
+                        "patterns": [
+                                "¿Cómo encontrar la suma de los dígitos en Python?",
+                                "Escribe un programa en Python para calcular la suma de los dígitos",
+                                "Programa en Python para la suma de los dígitos",
+                                "Calcular la suma de los dígitos en Python",
+                                "Código en Python para sumar los dígitos de un número"
+                        ],
+                        "responses": [
+                                "Aquí tienes un programa en Python para encontrar la suma de los dígitos de un número:\n\n```python\n# Programa en Python para encontrar la suma de los dígitos\n\ndef sum_of_digits(n):\n    return sum(int(digit) for digit in str(n))\n\nprint(sum_of_digits(1234))  # 10\n```"
+                        ]
+                },
+                {
+                        "tag": "algoritmo_suma_de_digitos_js",
+                        "patterns": [
+                                "¿Cómo encontrar la suma de los dígitos en JavaScript?",
+                                "Escribe un programa en JavaScript para calcular la suma de los dígitos",
+                                "Programa en JavaScript para la suma de los dígitos",
+                                "Calcular la suma de los dígitos en JavaScript",
+                                "Código en JavaScript para sumar los dígitos de un número"
+                        ],
+                        "responses": [
+                                "Aquí tienes un programa en JavaScript para encontrar la suma de los dígitos de un número:\n\n```javascript\n// Programa en JavaScript para encontrar la suma de los dígitos\nfunction sumOfDigits(num) {\n    return num.toString().split('').reduce((sum, digit) => sum + parseInt(digit), 0);\n}\nconsole.log(sumOfDigits(1234));  // 10\n```"
+                        ]
+                },
+                {
+                        "tag": "algoritmo_potencia",
+                        "patterns": [
+                                "¿Cómo encontrar la potencia de un número en Python?",
+                                "Escribe un programa en Python para calcular la potencia",
+                                "Programa en Python para encontrar la potencia de un número",
+                                "Calcular la potencia en Python",
+                                "Código en Python para exponentiación"
+                        ],
+                        "responses": [
+                                "Aquí tienes un programa en Python para encontrar la potencia de un número:\n\n```python\n# Programa en Python para calcular la potencia\n\ndef power(base, exp):\n    return base ** exp\n\nprint(power(2, 3))  # 8\n```"
+                        ]
+                },
+                {
+                        "tag": "algoritmo_potencia_js",
+                        "patterns": [
+                                "¿Cómo encontrar la potencia de un número en JavaScript?",
+                                "Escribe un programa en JavaScript para calcular la potencia",
+                                "Programa en JavaScript para encontrar la potencia de un número",
+                                "Calcular la potencia en JavaScript",
+                                "Código en JavaScript para exponentiación"
+                        ],
+                        "responses": [
+                                "Aquí tienes un programa en JavaScript para encontrar la potencia de un número:\n\n```javascript\n// Programa en JavaScript para calcular la potencia\nfunction power(base, exp) {\n    return Math.pow(base, exp);\n}\nconsole.log(power(2, 3));  // 8\n```"
+                        ]
+                },
+                {
+                        "tag": "algoritmo_mcm",
+                        "patterns": [
+                                "¿Cómo encontrar el MCM en Python?",
+                                "Escribe un programa en Python para calcular el MCM",
+                                "Programa en Python para el Mínimo Común Múltiplo",
+                                "Calcular el MCM en Python",
+                                "Código en Python para encontrar el MCM"
+                        ],
+                        "responses": [
+                                "Aquí tienes un programa en Python para encontrar el MCM de dos números:\n\n```python\n# Programa en Python para encontrar el MCM de dos números\n\ndef lcm(a, b):\n    greater = max(a, b)\n    while True:\n        if greater % a == 0 and greater % b == 0:\n            return greater\n        greater += 1\n\nprint(lcm(4, 5))  # 20\n```"
+                        ]
+                },
+                {
+                        "tag": "algoritmo_mcm_js",
+                        "patterns": [
+                                "¿Cómo encontrar el MCM en JavaScript?",
+                                "Escribe un programa en JavaScript para calcular el MCM",
+                                "Programa en JavaScript para el Mínimo Común Múltiplo",
+                                "Calcular el MCM en JavaScript",
+                                "Código en JavaScript para encontrar el MCM"
+                        ],
+                        "responses": [
+                                "Aquí tienes un programa en JavaScript para encontrar el MCM de dos números:\n\n```javascript\n// Programa en JavaScript para encontrar el MCM de dos números\nfunction lcm(a, b) {\n    let greater = Math.max(a, b);\n    while (true) {\n        if (greater % a === 0 && greater % b === 0) {\n            return greater;\n        }\n        greater++;\n    }\n}\nconsole.log(lcm(4, 5));  // 20\n```"
+                        ]
+                },
+                {
+                        "tag": "algoritmo_mcd",
+                        "patterns": [
+                                "¿Cómo encontrar el MCD en Python?",
+                                "Escribe un programa en Python para calcular el MCD",
+                                "Programa en Python para el Máximo Común Divisor",
+                                "Calcular el MCD en Python",
+                                "Código en Python para encontrar el MCD"
+                        ],
+                        "responses": [
+                                "Aquí tienes un programa en Python para encontrar el MCD de dos números:\n\n```python\n# Programa en Python para encontrar el MCD de dos números\n\ndef gcd(a, b):\n    while b != 0:\n        a, b = b, a % b\n    return a\n\nprint(gcd(12, 18))  # 6\n```"
+                        ]
+                },
+                {
+                        "tag": "algoritmo_mcd_js",
+                        "patterns": [
+                                "¿Cómo encontrar el MCD en JavaScript?",
+                                "Escribe un programa en JavaScript para calcular el MCD",
+                                "Programa en JavaScript para el Máximo Común Divisor",
+                                "Calcular el MCD en JavaScript",
+                                "Código en JavaScript para encontrar el MCD"
+                        ],
+                        "responses": [
+                                "Aquí tienes un programa en JavaScript para encontrar el MCD de dos números:\n\n```javascript\n// Programa en JavaScript para encontrar el MCD de dos números\nfunction gcd(a, b) {\n    while (b !== 0) {\n        let temp = b;\n        b = a % b;\n        a = temp;\n    }\n    return a;\n}\nconsole.log(gcd(12, 18));  // 6\n```"
+                        ]
+                },
+                {
+                        "tag": "algoritmo_par_impar",
+                        "patterns": [
+                                "¿Cómo verificar si un número es par o impar en Python?",
+                                "Escribe un programa en Python para verificar si un número es par o impar",
+                                "Programa en Python para verificar si un número es par o impar",
+                                "Verificar si un número es par o impar en Python"
+                        ],
+                        "responses": [
+                                "Aquí tienes un programa en Python para verificar si un número es par o impar:\n\n```python\n# Programa en Python para verificar si un número es par o impar\n\ndef even_odd(n):\n    if n % 2 == 0:\n        return 'Par'\n    else:\n        return 'Impar'\n\nprint(even_odd(4))  # Par\n```"
+                        ]
+                },
+                {
+                        "tag": "algoritmo_par_impar_js",
+                        "patterns": [
+                                "¿Cómo verificar si un número es par o impar en JavaScript?",
+                                "Escribe un programa en JavaScript para verificar si un número es par o impar",
+                                "Programa en JavaScript para verificar si un número es par o impar",
+                                "Verificar si un número es par o impar en JavaScript"
+                        ],
+                        "responses": [
+                                "Aquí tienes un programa en JavaScript para verificar si un número es par o impar:\n\n```javascript\n// Programa en JavaScript para verificar si un número es par o impar\nfunction evenOdd(num) {\n    return num % 2 === 0 ? 'Par' : 'Impar';\n}\nconsole.log(evenOdd(4));  // Par\n```"
+                        ]
+                },
+                {
+                        "tag": "algoritmo_area_de_circulo",
+                        "patterns": [
+                                "¿Cómo calcular el área de un círculo en Python?",
+                                "Escribe un programa en Python para calcular el área de un círculo",
+                                "Programa en Python para calcular el área de un círculo",
+                                "Calcular el área de un círculo en Python"
+                        ],
+                        "responses": [
+                                "Aquí tienes un programa en Python para calcular el área de un círculo:\n\n```python\n# Programa en Python para calcular el área de un círculo\nimport math\n\ndef area_of_circle(radius):\n    return math.pi * radius ** 2\n\nprint(area_of_circle(5))  # 78.53981633974483\n```"
+                        ]
+                },
+                {
+                        "tag": "algoritmo_area_de_circulo_js",
+                        "patterns": [
+                                "¿Cómo calcular el área de un círculo en JavaScript?",
+                                "Escribe un programa en JavaScript para calcular el área de un círculo",
+                                "Programa en JavaScript para calcular el área de un círculo",
+                                "Calcular el área de un círculo en JavaScript"
+                        ],
+                        "responses": [
+                                "Aquí tienes un programa en JavaScript para calcular el área de un círculo:\n\n```javascript\n// Programa en JavaScript para calcular el área de un círculo\nfunction areaOfCircle(radius) {\n    return Math.PI * radius * radius;\n}\nconsole.log(areaOfCircle(5));  // 78.53981633974483\n```"
+                        ]
+                }
+        ]
+}
