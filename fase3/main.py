@@ -20,7 +20,7 @@ class App:
         self.window.mainloop()
 
     def _setup_main_window(self):
-        self.window.title("Chatbot")
+        self.window.title("Proyecto IA1 - Fase 3")
         self.window.resizable(width=False, height=False)
         self.window.configure(width=500, height=650, background=BG_COLOR)
 
