@@ -19,12 +19,9 @@ https://drive.google.com/drive/folders/1rl7aqI9j8XEQK2943phIHeG5CEnaVQuP?usp=sha
 
 Se carga el archivo `intents.json` que contiene los patrones y las respuestas asociadas a cada intención.
 
-```js
-async function loadData() {
-  const response = await fetch("intents.json");
-  intentsData = await response.json();
-  // Procesa los datos...
-}
+```py
+with open('intents.json') as content:
+    data = json.load(content)
 ```
 
 El archivo `intents.json` tiene un formato como:
@@ -50,109 +47,205 @@ El archivo `intents.json` tiene un formato como:
 
 Se realiza un preprocesamiento sobre los patrones de las intenciones: tokenización, conversión a minúsculas y "stemming" (reducción a la raíz de las palabras).
 
-```js
-function tokenizeAndStem(sentence) {
-  const wordsInSentence = sentence
-    .toLowerCase()
-    .replace(/[^\w\s]/g, "") // Elimina caracteres especiales
-    .split(/\s+/); // Divide la frase en palabras
+```py
+tags = []
+patterns = []
+responses = {}
 
-  return wordsInSentence
-    .map((word) => stem(word))
-    .filter((word) => word !== "?");
-}
+for intent in data['intents']:
+    responses[intent['tag']] = intent['responses']
 
-function stem(word) {
-  if (word.endsWith("es")) {
-    return word.slice(0, -2);
-  } else if (word.endsWith("ed")) {
-    return word.slice(0, -2);
-  } else if (word.endsWith("ing")) {
-    return word.slice(0, -3);
-  } else {
-    return word;
-  }
-}
+    for line in intent['patterns']:
+        patterns.append(line)
+        tags.append(intent['tag'])
+
+data = pd.DataFrame({"patterns": patterns, "tags":tags})
+data['patterns'] = data['patterns'].apply(lambda wrd:[ltrs.lower() for ltrs in wrd if ltrs not in string.punctuation])
+data['patterns'] = data['patterns'].apply(lambda wrd: ''.join(wrd))
+
+tokenizer = Tokenizer(num_words=2000)
+tokenizer.fit_on_texts(data['patterns'])
+train = tokenizer.texts_to_sequences(data['patterns'])
+
+x_train = pad_sequences(train)
+
+le = LabelEncoder()
+y_train = le.fit_transform(data['tags'])
+
+input_shape = x_train.shape[1]
+
+vocabulary = len(tokenizer.word_index)
+output_lenght = le.classes_.shape[0]
+
+i = Input(shape=(input_shape,))
+x = Embedding(vocabulary+1, 10)(i)
+x = LSTM(10,return_sequences=True)(x)
+x = Flatten()(x)
+x = Dense(output_lenght,activation='softmax')(x)
+model = Model(i, x)
+
+model.compile(loss='sparse_categorical_crossentropy',optimizer='adam',metrics=['accuracy'])
+
+model.fit(x_train, y_train, epochs=200)
+
+print(model.summary())
+
+model.save('model.keras')
 ```
 
 ### 3. **Entrenamiento del Modelo**
 
 El modelo se entrena utilizando **TensorFlow.js** con los datos preprocesados. Se usa una red neuronal con dos capas ocultas de 8 unidades y la función de activación `relu`. La salida tiene tantas neuronas como intenciones posibles.
 
-```js
-async function trainModel(trainingData, outputData) {
-  const model = tf.sequential();
-  model.add(
-    tf.layers.dense({
-      units: 8,
-      inputShape: [trainingData[0].length],
-      activation: "relu",
-    })
-  );
-  model.add(tf.layers.dense({ units: 8, activation: "relu" }));
-  model.add(tf.layers.dense({ units: labels.length, activation: "softmax" }));
+```py
+import json
+import string
+import pandas as pd
+from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.layers import Dense, Embedding, LSTM, Input, Flatten
+from tensorflow.keras.models import Model
+from sklearn.preprocessing import LabelEncoder
 
-  model.compile({
-    loss: "categoricalCrossentropy",
-    optimizer: "adam",
-    metrics: ["accuracy"],
-  });
+with open('intents.json') as content:
+    data = json.load(content)
 
-  const xs = tf.tensor(trainingData);
-  const ys = tf.tensor(outputData);
+tags = []
+patterns = []
+responses = {}
 
-  await model.fit(xs, ys, {
-    epochs: 1000,
-    batchSize: 8,
-    verbose: 1,
-  });
+for intent in data['intents']:
+    responses[intent['tag']] = intent['responses']
 
-  return model;
-}
+    for line in intent['patterns']:
+        patterns.append(line)
+        tags.append(intent['tag'])
+
+data = pd.DataFrame({"patterns": patterns, "tags":tags})
+data['patterns'] = data['patterns'].apply(lambda wrd:[ltrs.lower() for ltrs in wrd if ltrs not in string.punctuation])
+data['patterns'] = data['patterns'].apply(lambda wrd: ''.join(wrd))
+
+tokenizer = Tokenizer(num_words=2000)
+tokenizer.fit_on_texts(data['patterns'])
+train = tokenizer.texts_to_sequences(data['patterns'])
+
+x_train = pad_sequences(train)
+
+le = LabelEncoder()
+y_train = le.fit_transform(data['tags'])
+
+input_shape = x_train.shape[1]
+
+vocabulary = len(tokenizer.word_index)
+output_lenght = le.classes_.shape[0]
+
+i = Input(shape=(input_shape,))
+x = Embedding(vocabulary+1, 10)(i)
+x = LSTM(10,return_sequences=True)(x)
+x = Flatten()(x)
+x = Dense(output_lenght,activation='softmax')(x)
+model = Model(i, x)
+
+model.compile(loss='sparse_categorical_crossentropy',optimizer='adam',metrics=['accuracy'])
+
+model.fit(x_train, y_train, epochs=200)
+
+print(model.summary())
+
+model.save('model.keras')
+
 ```
 
 ### 4. **Predicción de Respuesta**
 
 El modelo predice la intención del mensaje ingresado por el usuario. La entrada se convierte en un "bag of words" (bolsa de palabras), que es un vector binario de 0s y 1s indicando si una palabra de la entrada está presente en el vocabulario entrenado.
 
-```js
-async function predictResponse(input) {
-  const bag = words.map((word) => (input.includes(word) ? 1 : 0));
-  const prediction = await model.predict(tf.tensor([bag]));
-  const predictedIndex = prediction.argMax(1).dataSync()[0];
-  const predictedTag = labels[predictedIndex];
+```py
+def get_prediction(prediction_input):
+    texts_p = []
 
-  const intent = intentsData.intents.find(
-    (intent) => intent.tag === predictedTag
-  );
-  return intent.responses[Math.floor(Math.random() * intent.responses.length)];
-}
+    prediction_input = [letters.lower() for letters in prediction_input if letters not in string.punctuation]
+    prediction_input = ''.join(prediction_input)
+    texts_p.append(prediction_input)
+
+    prediction_input = tokenizer.texts_to_sequences(texts_p)
+    prediction_input = np.array(prediction_input).reshape(-1)
+    prediction_input = pad_sequences([prediction_input], input_shape)
+
+    output = model.predict(prediction_input)
+    output = output.argmax()
+
+    response_tag = le.inverse_transform([output])[0]
+    return random.choice(responses[response_tag])
+
 ```
 
 ### 5. **Interacción con el Usuario**
 
 El usuario escribe un mensaje y el chatbot responde de acuerdo a la predicción del modelo. La entrada del usuario es tomada de un campo de texto, y la respuesta se muestra en la interfaz.
 
-```js
-async function sendMessage() {
-    const userInput = document.getElementById('user_input').value;
-    if (userInput.toLowerCase() === 'quit') {
-        return;
-    }
+```py
+import numpy as np
+import pandas as pd
+import string
+import json
+import random
 
-    const response = await predictResponse(userInput);
-    document.getElementById('chat').innerHTML += `<div><strong>Tu:</strong> ${userInput}</div>`;
-    document.getElementById('chat').innerHTML += `<div><strong>Bot:</strong> ${response}</div>`;
-}
+from tensorflow.keras.models import load_model
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.preprocessing.text import Tokenizer
+from sklearn.preprocessing import LabelEncoder
 
----
+with open('intents.json') as content:
+    data = json.load(content)
 
-## Descripción de Funciones
+tags = []
+patterns = []
+responses = {}
 
-1. **`loadData()`**: Carga y preprocesa los datos de `intents.json`, genera el vocabulario y prepara los datos para el entrenamiento.
-2. **`tokenizeAndStem(sentence)`**: Convierte una frase en una lista de palabras procesadas.
-3. **`trainModel(trainingData, outputData)`**: Entrena el modelo con los datos procesados utilizando una red neuronal de TensorFlow.js.
-4. **`predictResponse(input)`**: Realiza una predicción de la respuesta del chatbot basada en la entrada del usuario.
-5. **`sendMessage()`**: Obtiene la entrada del usuario, predice la respuesta del modelo y la muestra en la interfaz.
-6. **`stem(word)`**: Aplica un proceso básico de stemming para reducir las palabras a su raíz.
+for intent in data['intents']:
+    responses[intent['tag']] = intent['responses']
+
+    for line in intent['patterns']:
+        patterns.append(line)
+        tags.append(intent['tag'])
+
+data = pd.DataFrame({"patterns": patterns, "tags":tags})
+data['patterns'] = data['patterns'].apply(lambda wrd:[ltrs.lower() for ltrs in wrd if ltrs not in string.punctuation])
+data['patterns'] = data['patterns'].apply(lambda wrd: ''.join(wrd))
+
+tokenizer = Tokenizer(num_words=2000)
+tokenizer.fit_on_texts(data['patterns'])
+train = tokenizer.texts_to_sequences(data['patterns'])
+
+x_train = pad_sequences(train)
+
+le = LabelEncoder()
+y_train = le.fit_transform(data['tags'])
+
+input_shape = x_train.shape[1]
+
+vocabulary = len(tokenizer.word_index)
+output_lenght = le.classes_.shape[0]
+
+model = load_model('./model.keras')
+
+model.summary()
+
+def get_prediction(prediction_input):
+    texts_p = []
+
+    prediction_input = [letters.lower() for letters in prediction_input if letters not in string.punctuation]
+    prediction_input = ''.join(prediction_input)
+    texts_p.append(prediction_input)
+
+    prediction_input = tokenizer.texts_to_sequences(texts_p)
+    prediction_input = np.array(prediction_input).reshape(-1)
+    prediction_input = pad_sequences([prediction_input], input_shape)
+
+    output = model.predict(prediction_input)
+    output = output.argmax()
+
+    response_tag = le.inverse_transform([output])[0]
+    return random.choice(responses[response_tag])
 ```
